@@ -106,4 +106,24 @@ final class _$ApiService extends ApiService {
     );
     return client.send<dynamic, dynamic>($request);
   }
+
+  @override
+  Future<Response<dynamic>> addFood(
+    Map<String, dynamic> body,
+    String token,
+  ) {
+    final Uri $url = Uri.parse('/api/category/addCategory');
+    final Map<String, String> $headers = {
+      'Authorization': token,
+    };
+    final $body = body;
+    final Request $request = Request(
+      'POST',
+      $url,
+      client.baseUrl,
+      body: $body,
+      headers: $headers,
+    );
+    return client.send<dynamic, dynamic>($request);
+  }
 }

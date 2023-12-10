@@ -1,3 +1,4 @@
+import 'package:eatplek_agent/application/food/food_bloc.dart';
 import 'package:eatplek_agent/application/order/order_bloc.dart';
 import 'package:eatplek_agent/domain/core/di/injection.dart';
 import 'package:eatplek_agent/presentation/core/utils/color/app_color.dart';
@@ -5,12 +6,13 @@ import 'package:eatplek_agent/presentation/core/utils/global/global.dart';
 import 'package:eatplek_agent/presentation/core/utils/padding/app_padding.dart';
 import 'package:eatplek_agent/presentation/core/utils/sized_box/app_sized_box.dart';
 import 'package:eatplek_agent/presentation/core/utils/text_style/app_text_style.dart';
+import 'package:eatplek_agent/presentation/cutomise/widgets/customise_desktop_view.dart';
+import 'package:eatplek_agent/presentation/edit/widgets/edit_desktop_view.dart';
 import 'package:eatplek_agent/presentation/order/widgets/order_desktop_pending_view.dart';
 import 'package:eatplek_agent/presentation/order/widgets/order_desktop_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class HomeDesktopView extends HookWidget {
@@ -84,29 +86,38 @@ class HomeDesktopView extends HookWidget {
                                       break;
                                     case 1:
                                       context.read<OrderBloc>().add(
-                                          const OrderEvent.getPrepareOrderList());
+                                          const OrderEvent
+                                              .getPrepareOrderList());
                                       break;
                                     case 2:
                                       context.read<OrderBloc>().add(
-                                          const OrderEvent.getAcceptedOrderList());
+                                          const OrderEvent
+                                              .getAcceptedOrderList());
                                       break;
                                     case 3:
                                       context.read<OrderBloc>().add(
-                                          const OrderEvent.getRejectedOrderList());
+                                          const OrderEvent
+                                              .getRejectedOrderList());
                                       break;
                                     case 4:
                                       context.read<OrderBloc>().add(
-                                          const OrderEvent.getCompletedOrderList());
+                                          const OrderEvent
+                                              .getCompletedOrderList());
                                       break;
                                     case 5:
                                       context.read<OrderBloc>().add(
-                                          const OrderEvent.getCancelledOrderList());
+                                          const OrderEvent
+                                              .getCancelledOrderList());
                                       break;
                                   }
                                 } else if (index == 6) {
+                                  context
+                                      .read<FoodBloc>()
+                                      .add(const FoodEvent.getFoodList());
                                 } else if (index == 7) {}
                               },
-                              contentPadding: kPaddingSymmetric20.copyWith(top: 10, bottom: 10),
+                              contentPadding: kPaddingSymmetric20.copyWith(
+                                  top: 10, bottom: 10),
                               leading: CircleAvatar(
                                 backgroundColor: kPrimaryColor,
                                 child: Text(
@@ -154,8 +165,12 @@ class HomeDesktopView extends HookWidget {
             ),
           ),
           selectedIndex.value == 0
-              ?  OrderDeskTopPendingView()
-              : const OrderDeskTopView()
+              ? OrderDeskTopPendingView()
+              : selectedIndex.value == 6
+                  ? const EditDesktopView()
+                  : selectedIndex.value == 7
+                      ? const CustomiseDeskTopView()
+                      : const OrderDeskTopView()
         ],
       ),
       floatingActionButton: FloatingActionButton(

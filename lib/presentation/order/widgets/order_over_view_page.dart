@@ -1,4 +1,7 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:async';
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:eatplek_agent/application/status/status_bloc.dart';
@@ -10,28 +13,58 @@ import 'package:eatplek_agent/presentation/core/utils/text_style/app_text_style.
 import 'package:eatplek_agent/presentation/router/app_router.gr.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:lottie/lottie.dart';
 
-class OrderOverviewPage extends StatelessWidget {
-  final double? width;
-  final FoodList? state;
-  OrderOverviewPage(
+class OrderOverviewPage extends StatefulWidget {
+  const OrderOverviewPage(
       {super.key, this.width, this.state, this.isPending, this.player});
 
+  final double? width;
+  final FoodList? state;
   final bool? isPending;
-  final ValueNotifier<int> selectedIndex = ValueNotifier<int>(-1);
-  final ValueNotifier<int> timer = ValueNotifier<int>(0);
   final AudioPlayer? player;
+
+  @override
+  State<OrderOverviewPage> createState() => _OrderOverviewPageState();
+}
+
+class _OrderOverviewPageState extends State<OrderOverviewPage> {
+  final ValueNotifier<int> selectedIndex = ValueNotifier<int>(-1);
+  late ValueNotifier<Duration> timer;
+  late StreamController<int> timerController;
+  late int remainingSeconds;
+  @override
+  void initState() {
+    super.initState();
+    int initialSeconds = widget.state?.orderTimer ?? 0;
+    remainingSeconds = initialSeconds;
+    timer = ValueNotifier<Duration>(Duration(seconds: initialSeconds));
+    timerController = StreamController<int>();
+
+    Timer.periodic(const Duration(seconds: 1), (timer) {
+      timerController.add(timer.tick);
+    });
+
+    timerController.stream.listen((elapsedSeconds) {
+      if (remainingSeconds > 0) {
+        remainingSeconds--;
+        timer.value = Duration(seconds: remainingSeconds);
+      } else {
+        timerController.close();
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    timerController.close();
+  }
+
   @override
   Widget build(BuildContext context) {
-    if (isPending == true) {
-      Timer.periodic(const Duration(seconds: 1), (timer) {
-        if (timer.tick == 60) {
-          timer.cancel();
-        }
-        this.timer.value = timer.tick;
-      });
-    }
     return InkWell(
       onHover: (value) {
         if (value) {
@@ -41,14 +74,15 @@ class OrderOverviewPage extends StatelessWidget {
         }
       },
       borderRadius: BorderRadius.circular(10),
-      onTap: () => AutoRouter.of(context).push(DetailsRoute(state: state)),
+      onTap: () =>
+          AutoRouter.of(context).push(DetailsRoute(state: widget.state)),
       child: ValueListenableBuilder(
         valueListenable: selectedIndex,
         builder: (context, value, child) => Stack(
           children: [
             AnimatedContainer(
               duration: const Duration(milliseconds: 300),
-              width: width,
+              width: widget.width,
               margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               padding: selectedIndex.value == 1
                   ? kPadding10.copyWith(left: 20)
@@ -72,7 +106,10 @@ class OrderOverviewPage extends StatelessWidget {
                     margin: kPadding10,
                     child: ClipOval(
                       child: Image.network(
-                        state?.foodItems?.map((e) => e.foodImage).first ?? '',
+                        widget.state?.foodItems
+                                ?.map((e) => e.foodImage)
+                                .first ??
+                            '',
                         fit: BoxFit.cover,
                         width: 50,
                         height: 50,
@@ -102,20 +139,27 @@ class OrderOverviewPage extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(state?.userId?.userName ?? '',
+                      Text(widget.state?.userId?.userName ?? '',
                           style: kTextBodyStyle),
                       kHeight10,
-                      Text(state?.dineIn == true ? 'Dine In' : 'Take Away',
+                      Text(
+                          widget.state?.dineIn == true
+                              ? 'Dine In'
+                              : 'Take Away',
                           style: kTextBodyStyle),
                       kHeight10,
-                      Text(state?.bookingTime.toString().substring(0, 10) ?? '',
+                      Text(
+                          widget.state?.bookingTime
+                                  .toString()
+                                  .substring(0, 10) ??
+                              '',
                           style: kTextBodyStyle),
                       kHeight10,
-                      Text(state?.status ?? '', style: kTextBodyStyle),
+                      Text(widget.state?.status ?? '', style: kTextBodyStyle),
                     ],
                   ),
                   const Spacer(),
-                  if (isPending == true)
+                  if (widget.isPending == true)
                     Container(
                       decoration: const BoxDecoration(
                         color: kSecondaryColor,
@@ -131,11 +175,11 @@ class OrderOverviewPage extends StatelessWidget {
                             onPressed: () async {
                               context.read<StatusBloc>().add(
                                     StatusEvent.postStatus(
-                                      bookingId: state?.id ?? '',
+                                      bookingId: widget.state?.id ?? '',
                                       status: 'Accepted',
                                     ),
                                   );
-                              await player?.stop();
+                              await widget.player?.stop();
                             },
                             icon: const Icon(
                               Icons.check,
@@ -147,12 +191,12 @@ class OrderOverviewPage extends StatelessWidget {
                             onPressed: () async {
                               context.read<StatusBloc>().add(
                                     StatusEvent.postStatus(
-                                      bookingId: state?.id ?? '',
+                                      bookingId: widget.state?.id ?? '',
                                       status: 'Rejected',
                                     ),
                                   );
 
-                              await player?.stop();
+                              await widget.player?.stop();
                             },
                             icon: const Icon(
                               Icons.close,
@@ -162,16 +206,63 @@ class OrderOverviewPage extends StatelessWidget {
                           ),
                           IconButton(
                             onPressed: () async {
-                              context.read<StatusBloc>().add(
-                                    StatusEvent.postStatus(
-                                      bookingId: state?.id ?? '',
-                                      timeChange: '',
-                                      note: '',
-                                      status: 'Changed',
-                                    ),
-                                  );
-
-                              await player?.stop();
+                              showDialog(
+                                  context: context,
+                                  builder: (context) {
+                                    return AlertDialog(
+                                      backgroundColor: kSecondaryColor,
+                                      title: Text('Change Time',
+                                          style: kTextBodyStyle.copyWith(
+                                              fontSize: 20.spMax)),
+                                      content: Column(
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          LottieBuilder.asset(
+                                            'assets/lottie/timer.json',
+                                            height: 200,
+                                            width: 300,
+                                          ),
+                                          TextField(
+                                            decoration: InputDecoration(
+                                                hintText:
+                                                    'Enter Time Change (in minutes)',
+                                                hintStyle: kTextBodyStyle),
+                                          ),
+                                          TextField(
+                                            decoration: InputDecoration(
+                                                hintText:
+                                                    'Enter Note For Customer',
+                                                hintStyle: kTextBodyStyle),
+                                          ),
+                                        ],
+                                      ),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () async {
+                                            await widget.player?.stop();
+                                            Navigator.pop(context);
+                                          },
+                                          child: const Text('Cancel'),
+                                        ),
+                                        TextButton(
+                                          onPressed: () async {
+                                            context.read<StatusBloc>().add(
+                                                  StatusEvent.postStatus(
+                                                    bookingId:
+                                                        widget.state?.id ?? '',
+                                                    timeChange: '',
+                                                    note: '',
+                                                    status: 'Changed',
+                                                  ),
+                                                );
+                                            await widget.player?.stop();
+                                            context.router.pop();
+                                          },
+                                          child: const Text('Change'),
+                                        ),
+                                      ],
+                                    );
+                                  });
                             },
                             icon: const Icon(
                               Icons.alarm,
@@ -185,7 +276,7 @@ class OrderOverviewPage extends StatelessWidget {
                 ],
               ),
             ),
-            if (isPending == true)
+            if (widget.isPending == true)
               Positioned(
                 top: 5,
                 left: 10,
@@ -198,10 +289,13 @@ class OrderOverviewPage extends StatelessWidget {
                       bottomRight: Radius.circular(10),
                     ),
                   ),
-                  child: Text(
-                    '${timer.value}',
-                    style: kTextBodyStyle.copyWith(
-                      color: Colors.white,
+                  child: ValueListenableBuilder(
+                    valueListenable: timer,
+                    builder: (context, value, child) => Text(
+                      timer.value.toString().substring(2, 7),
+                      style: kTextBodyStyle.copyWith(
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),

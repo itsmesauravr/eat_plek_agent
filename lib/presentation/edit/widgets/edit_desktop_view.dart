@@ -8,6 +8,7 @@ import 'package:eatplek_agent/presentation/edit/widgets/edit_over_view_page.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:lottie/lottie.dart';
 
 @RoutePage()
 class EditDesktopView extends StatelessWidget {
@@ -28,7 +29,7 @@ class EditDesktopView extends StatelessWidget {
                 child: Padding(
                   padding: kPadding10 + kPaddingOnlyTop10,
                   child: SearchBar(
-                    elevation:  MaterialStateProperty.all(0),
+                    elevation: MaterialStateProperty.all(0),
                     shape: MaterialStateProperty.all(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.r),
@@ -115,9 +116,7 @@ class BuildListItem extends StatelessWidget {
         if (foodItems != null && foodItems.isNotEmpty) {
           return BuildCategoryView(state.foodList[index]);
         } else {
-          return const Center(
-            child: Text('No Data'),
-          );
+          return LottieBuilder.asset('assets/lottie/no_order.json');
         }
       },
       loadFailure: (state) => const Center(
@@ -155,7 +154,7 @@ class BuildCategoryView extends StatelessWidget {
             children: [
               ...foodItem.foodItems!.map(
                 (foodItem) => EditOverviewPage(
-                  width: 400,
+                  width: 350,
                   contentPadding: kPadding10,
                   foodItem: foodItem,
                 ),

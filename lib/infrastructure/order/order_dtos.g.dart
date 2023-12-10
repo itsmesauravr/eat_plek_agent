@@ -72,6 +72,7 @@ _$FoodListImpl _$$FoodListImplFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['createdAt'] as String),
       v: json['__v'] as int?,
+      orderTimer: json['orderTimer'] as int?,
     );
 
 Map<String, dynamic> _$$FoodListImplToJson(_$FoodListImpl instance) =>
@@ -92,6 +93,7 @@ Map<String, dynamic> _$$FoodListImplToJson(_$FoodListImpl instance) =>
       'status': instance.status,
       'createdAt': instance.createdAt?.toIso8601String(),
       '__v': instance.v,
+      'orderTimer': instance.orderTimer,
     };
 
 _$FoodItemImpl _$$FoodItemImplFromJson(Map<String, dynamic> json) =>

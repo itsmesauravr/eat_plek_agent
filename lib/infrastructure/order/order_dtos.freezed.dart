@@ -424,6 +424,8 @@ mixin _$FoodList {
   DateTime? get createdAt => throw _privateConstructorUsedError;
   @JsonKey(name: "__v")
   int? get v => throw _privateConstructorUsedError;
+  @JsonKey(name: "orderTimer")
+  int? get orderTimer => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -452,7 +454,8 @@ abstract class $FoodListCopyWith<$Res> {
       @JsonKey(name: "foodItems") List<FoodItem>? foodItems,
       @JsonKey(name: "status") String? status,
       @JsonKey(name: "createdAt") DateTime? createdAt,
-      @JsonKey(name: "__v") int? v});
+      @JsonKey(name: "__v") int? v,
+      @JsonKey(name: "orderTimer") int? orderTimer});
 
   $UserIdCopyWith<$Res>? get userId;
 }
@@ -486,6 +489,7 @@ class _$FoodListCopyWithImpl<$Res, $Val extends FoodList>
     Object? status = freezed,
     Object? createdAt = freezed,
     Object? v = freezed,
+    Object? orderTimer = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -552,6 +556,10 @@ class _$FoodListCopyWithImpl<$Res, $Val extends FoodList>
           ? _value.v
           : v // ignore: cast_nullable_to_non_nullable
               as int?,
+      orderTimer: freezed == orderTimer
+          ? _value.orderTimer
+          : orderTimer // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 
@@ -592,7 +600,8 @@ abstract class _$$FoodListImplCopyWith<$Res>
       @JsonKey(name: "foodItems") List<FoodItem>? foodItems,
       @JsonKey(name: "status") String? status,
       @JsonKey(name: "createdAt") DateTime? createdAt,
-      @JsonKey(name: "__v") int? v});
+      @JsonKey(name: "__v") int? v,
+      @JsonKey(name: "orderTimer") int? orderTimer});
 
   @override
   $UserIdCopyWith<$Res>? get userId;
@@ -625,6 +634,7 @@ class __$$FoodListImplCopyWithImpl<$Res>
     Object? status = freezed,
     Object? createdAt = freezed,
     Object? v = freezed,
+    Object? orderTimer = freezed,
   }) {
     return _then(_$FoodListImpl(
       id: freezed == id
@@ -691,6 +701,10 @@ class __$$FoodListImplCopyWithImpl<$Res>
           ? _value.v
           : v // ignore: cast_nullable_to_non_nullable
               as int?,
+      orderTimer: freezed == orderTimer
+          ? _value.orderTimer
+          : orderTimer // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -714,7 +728,8 @@ class _$FoodListImpl implements _FoodList {
       @JsonKey(name: "foodItems") final List<FoodItem>? foodItems,
       @JsonKey(name: "status") this.status,
       @JsonKey(name: "createdAt") this.createdAt,
-      @JsonKey(name: "__v") this.v})
+      @JsonKey(name: "__v") this.v,
+      @JsonKey(name: "orderTimer") this.orderTimer})
       : _foodItems = foodItems;
 
   factory _$FoodListImpl.fromJson(Map<String, dynamic> json) =>
@@ -776,10 +791,13 @@ class _$FoodListImpl implements _FoodList {
   @override
   @JsonKey(name: "__v")
   final int? v;
+  @override
+  @JsonKey(name: "orderTimer")
+  final int? orderTimer;
 
   @override
   String toString() {
-    return 'FoodList(id: $id, userId: $userId, hotelId: $hotelId, dineIn: $dineIn, guest: $guest, bookingTime: $bookingTime, totalAmount: $totalAmount, taxAmount: $taxAmount, amountPaid: $amountPaid, amountPaidAt: $amountPaidAt, rejectMessage: $rejectMessage, rejectTime: $rejectTime, foodItems: $foodItems, status: $status, createdAt: $createdAt, v: $v)';
+    return 'FoodList(id: $id, userId: $userId, hotelId: $hotelId, dineIn: $dineIn, guest: $guest, bookingTime: $bookingTime, totalAmount: $totalAmount, taxAmount: $taxAmount, amountPaid: $amountPaid, amountPaidAt: $amountPaidAt, rejectMessage: $rejectMessage, rejectTime: $rejectTime, foodItems: $foodItems, status: $status, createdAt: $createdAt, v: $v, orderTimer: $orderTimer)';
   }
 
   @override
@@ -811,7 +829,9 @@ class _$FoodListImpl implements _FoodList {
             (identical(other.status, status) || other.status == status) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
-            (identical(other.v, v) || other.v == v));
+            (identical(other.v, v) || other.v == v) &&
+            (identical(other.orderTimer, orderTimer) ||
+                other.orderTimer == orderTimer));
   }
 
   @JsonKey(ignore: true)
@@ -833,7 +853,8 @@ class _$FoodListImpl implements _FoodList {
       const DeepCollectionEquality().hash(_foodItems),
       status,
       createdAt,
-      v);
+      v,
+      orderTimer);
 
   @JsonKey(ignore: true)
   @override
@@ -866,7 +887,8 @@ abstract class _FoodList implements FoodList {
       @JsonKey(name: "foodItems") final List<FoodItem>? foodItems,
       @JsonKey(name: "status") final String? status,
       @JsonKey(name: "createdAt") final DateTime? createdAt,
-      @JsonKey(name: "__v") final int? v}) = _$FoodListImpl;
+      @JsonKey(name: "__v") final int? v,
+      @JsonKey(name: "orderTimer") final int? orderTimer}) = _$FoodListImpl;
 
   factory _FoodList.fromJson(Map<String, dynamic> json) =
       _$FoodListImpl.fromJson;
@@ -919,6 +941,9 @@ abstract class _FoodList implements FoodList {
   @override
   @JsonKey(name: "__v")
   int? get v;
+  @override
+  @JsonKey(name: "orderTimer")
+  int? get orderTimer;
   @override
   @JsonKey(ignore: true)
   _$$FoodListImplCopyWith<_$FoodListImpl> get copyWith =>

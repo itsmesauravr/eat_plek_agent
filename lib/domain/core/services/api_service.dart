@@ -18,6 +18,8 @@ abstract class ApiService extends ChopperService {
   Future<Response> getOrders(@Header('Authorization') String token);
   @Post(path: '/booking/accept')
   Future<Response> acceptOrder(@Body() Map<String, dynamic> body, @Header('Authorization') String token);
+  @Post(path: '/category/addCategory')
+  Future<Response> addFood(@Body() Map<String, dynamic> body, @Header('Authorization') String token);
 
   static ApiService create() {
     final client = ChopperClient(

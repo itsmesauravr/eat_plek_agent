@@ -2,8 +2,8 @@
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'dart:convert';
-part 'order_dtos.freezed.dart';
 part 'order_dtos.g.dart';
+part 'order_dtos.freezed.dart';
 
 OrderDto orderDtoFromJson(String str) => OrderDto.fromJson(json.decode(str));
 
@@ -68,6 +68,8 @@ class FoodList with _$FoodList {
         DateTime? createdAt,
         @JsonKey(name: "__v")
         int? v,
+        @JsonKey(name: "orderTimer")
+        int? orderTimer,
     }) = _FoodList;
 
     factory FoodList.fromJson(Map<String, dynamic> json) => _$FoodListFromJson(json);

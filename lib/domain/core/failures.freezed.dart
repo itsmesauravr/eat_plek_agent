@@ -22,6 +22,9 @@ mixin _$ValueFailure<T> {
     required TResult Function(T failedValue) invalidPhoneNumber,
     required TResult Function(T failedValue) invalidPassword,
     required TResult Function(T failedValue) invalidOtp,
+    required TResult Function(T failedValue) invalidFoodName,
+    required TResult Function(T failedValue) invalidFoodPrice,
+    required TResult Function(T failedValue) invalidFoodDescription,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -29,6 +32,9 @@ mixin _$ValueFailure<T> {
     TResult? Function(T failedValue)? invalidPhoneNumber,
     TResult? Function(T failedValue)? invalidPassword,
     TResult? Function(T failedValue)? invalidOtp,
+    TResult? Function(T failedValue)? invalidFoodName,
+    TResult? Function(T failedValue)? invalidFoodPrice,
+    TResult? Function(T failedValue)? invalidFoodDescription,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +42,9 @@ mixin _$ValueFailure<T> {
     TResult Function(T failedValue)? invalidPhoneNumber,
     TResult Function(T failedValue)? invalidPassword,
     TResult Function(T failedValue)? invalidOtp,
+    TResult Function(T failedValue)? invalidFoodName,
+    TResult Function(T failedValue)? invalidFoodPrice,
+    TResult Function(T failedValue)? invalidFoodDescription,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -44,6 +53,10 @@ mixin _$ValueFailure<T> {
     required TResult Function(InvalidPhoneNumber<T> value) invalidPhoneNumber,
     required TResult Function(InvalidPassword<T> value) invalidPassword,
     required TResult Function(InvalidOtp<T> value) invalidOtp,
+    required TResult Function(InvalidFoodName<T> value) invalidFoodName,
+    required TResult Function(InvalidFoodPrice<T> value) invalidFoodPrice,
+    required TResult Function(InvalidFoodDescription<T> value)
+        invalidFoodDescription,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -51,6 +64,9 @@ mixin _$ValueFailure<T> {
     TResult? Function(InvalidPhoneNumber<T> value)? invalidPhoneNumber,
     TResult? Function(InvalidPassword<T> value)? invalidPassword,
     TResult? Function(InvalidOtp<T> value)? invalidOtp,
+    TResult? Function(InvalidFoodName<T> value)? invalidFoodName,
+    TResult? Function(InvalidFoodPrice<T> value)? invalidFoodPrice,
+    TResult? Function(InvalidFoodDescription<T> value)? invalidFoodDescription,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -58,6 +74,9 @@ mixin _$ValueFailure<T> {
     TResult Function(InvalidPhoneNumber<T> value)? invalidPhoneNumber,
     TResult Function(InvalidPassword<T> value)? invalidPassword,
     TResult Function(InvalidOtp<T> value)? invalidOtp,
+    TResult Function(InvalidFoodName<T> value)? invalidFoodName,
+    TResult Function(InvalidFoodPrice<T> value)? invalidFoodPrice,
+    TResult Function(InvalidFoodDescription<T> value)? invalidFoodDescription,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -172,6 +191,9 @@ class _$InvalidPhoneNumberImpl<T> implements InvalidPhoneNumber<T> {
     required TResult Function(T failedValue) invalidPhoneNumber,
     required TResult Function(T failedValue) invalidPassword,
     required TResult Function(T failedValue) invalidOtp,
+    required TResult Function(T failedValue) invalidFoodName,
+    required TResult Function(T failedValue) invalidFoodPrice,
+    required TResult Function(T failedValue) invalidFoodDescription,
   }) {
     return invalidPhoneNumber(failedValue);
   }
@@ -182,6 +204,9 @@ class _$InvalidPhoneNumberImpl<T> implements InvalidPhoneNumber<T> {
     TResult? Function(T failedValue)? invalidPhoneNumber,
     TResult? Function(T failedValue)? invalidPassword,
     TResult? Function(T failedValue)? invalidOtp,
+    TResult? Function(T failedValue)? invalidFoodName,
+    TResult? Function(T failedValue)? invalidFoodPrice,
+    TResult? Function(T failedValue)? invalidFoodDescription,
   }) {
     return invalidPhoneNumber?.call(failedValue);
   }
@@ -192,6 +217,9 @@ class _$InvalidPhoneNumberImpl<T> implements InvalidPhoneNumber<T> {
     TResult Function(T failedValue)? invalidPhoneNumber,
     TResult Function(T failedValue)? invalidPassword,
     TResult Function(T failedValue)? invalidOtp,
+    TResult Function(T failedValue)? invalidFoodName,
+    TResult Function(T failedValue)? invalidFoodPrice,
+    TResult Function(T failedValue)? invalidFoodDescription,
     required TResult orElse(),
   }) {
     if (invalidPhoneNumber != null) {
@@ -206,6 +234,10 @@ class _$InvalidPhoneNumberImpl<T> implements InvalidPhoneNumber<T> {
     required TResult Function(InvalidPhoneNumber<T> value) invalidPhoneNumber,
     required TResult Function(InvalidPassword<T> value) invalidPassword,
     required TResult Function(InvalidOtp<T> value) invalidOtp,
+    required TResult Function(InvalidFoodName<T> value) invalidFoodName,
+    required TResult Function(InvalidFoodPrice<T> value) invalidFoodPrice,
+    required TResult Function(InvalidFoodDescription<T> value)
+        invalidFoodDescription,
   }) {
     return invalidPhoneNumber(this);
   }
@@ -216,6 +248,9 @@ class _$InvalidPhoneNumberImpl<T> implements InvalidPhoneNumber<T> {
     TResult? Function(InvalidPhoneNumber<T> value)? invalidPhoneNumber,
     TResult? Function(InvalidPassword<T> value)? invalidPassword,
     TResult? Function(InvalidOtp<T> value)? invalidOtp,
+    TResult? Function(InvalidFoodName<T> value)? invalidFoodName,
+    TResult? Function(InvalidFoodPrice<T> value)? invalidFoodPrice,
+    TResult? Function(InvalidFoodDescription<T> value)? invalidFoodDescription,
   }) {
     return invalidPhoneNumber?.call(this);
   }
@@ -226,6 +261,9 @@ class _$InvalidPhoneNumberImpl<T> implements InvalidPhoneNumber<T> {
     TResult Function(InvalidPhoneNumber<T> value)? invalidPhoneNumber,
     TResult Function(InvalidPassword<T> value)? invalidPassword,
     TResult Function(InvalidOtp<T> value)? invalidOtp,
+    TResult Function(InvalidFoodName<T> value)? invalidFoodName,
+    TResult Function(InvalidFoodPrice<T> value)? invalidFoodPrice,
+    TResult Function(InvalidFoodDescription<T> value)? invalidFoodDescription,
     required TResult orElse(),
   }) {
     if (invalidPhoneNumber != null) {
@@ -319,6 +357,9 @@ class _$InvalidPasswordImpl<T> implements InvalidPassword<T> {
     required TResult Function(T failedValue) invalidPhoneNumber,
     required TResult Function(T failedValue) invalidPassword,
     required TResult Function(T failedValue) invalidOtp,
+    required TResult Function(T failedValue) invalidFoodName,
+    required TResult Function(T failedValue) invalidFoodPrice,
+    required TResult Function(T failedValue) invalidFoodDescription,
   }) {
     return invalidPassword(failedValue);
   }
@@ -329,6 +370,9 @@ class _$InvalidPasswordImpl<T> implements InvalidPassword<T> {
     TResult? Function(T failedValue)? invalidPhoneNumber,
     TResult? Function(T failedValue)? invalidPassword,
     TResult? Function(T failedValue)? invalidOtp,
+    TResult? Function(T failedValue)? invalidFoodName,
+    TResult? Function(T failedValue)? invalidFoodPrice,
+    TResult? Function(T failedValue)? invalidFoodDescription,
   }) {
     return invalidPassword?.call(failedValue);
   }
@@ -339,6 +383,9 @@ class _$InvalidPasswordImpl<T> implements InvalidPassword<T> {
     TResult Function(T failedValue)? invalidPhoneNumber,
     TResult Function(T failedValue)? invalidPassword,
     TResult Function(T failedValue)? invalidOtp,
+    TResult Function(T failedValue)? invalidFoodName,
+    TResult Function(T failedValue)? invalidFoodPrice,
+    TResult Function(T failedValue)? invalidFoodDescription,
     required TResult orElse(),
   }) {
     if (invalidPassword != null) {
@@ -353,6 +400,10 @@ class _$InvalidPasswordImpl<T> implements InvalidPassword<T> {
     required TResult Function(InvalidPhoneNumber<T> value) invalidPhoneNumber,
     required TResult Function(InvalidPassword<T> value) invalidPassword,
     required TResult Function(InvalidOtp<T> value) invalidOtp,
+    required TResult Function(InvalidFoodName<T> value) invalidFoodName,
+    required TResult Function(InvalidFoodPrice<T> value) invalidFoodPrice,
+    required TResult Function(InvalidFoodDescription<T> value)
+        invalidFoodDescription,
   }) {
     return invalidPassword(this);
   }
@@ -363,6 +414,9 @@ class _$InvalidPasswordImpl<T> implements InvalidPassword<T> {
     TResult? Function(InvalidPhoneNumber<T> value)? invalidPhoneNumber,
     TResult? Function(InvalidPassword<T> value)? invalidPassword,
     TResult? Function(InvalidOtp<T> value)? invalidOtp,
+    TResult? Function(InvalidFoodName<T> value)? invalidFoodName,
+    TResult? Function(InvalidFoodPrice<T> value)? invalidFoodPrice,
+    TResult? Function(InvalidFoodDescription<T> value)? invalidFoodDescription,
   }) {
     return invalidPassword?.call(this);
   }
@@ -373,6 +427,9 @@ class _$InvalidPasswordImpl<T> implements InvalidPassword<T> {
     TResult Function(InvalidPhoneNumber<T> value)? invalidPhoneNumber,
     TResult Function(InvalidPassword<T> value)? invalidPassword,
     TResult Function(InvalidOtp<T> value)? invalidOtp,
+    TResult Function(InvalidFoodName<T> value)? invalidFoodName,
+    TResult Function(InvalidFoodPrice<T> value)? invalidFoodPrice,
+    TResult Function(InvalidFoodDescription<T> value)? invalidFoodDescription,
     required TResult orElse(),
   }) {
     if (invalidPassword != null) {
@@ -465,6 +522,9 @@ class _$InvalidOtpImpl<T> implements InvalidOtp<T> {
     required TResult Function(T failedValue) invalidPhoneNumber,
     required TResult Function(T failedValue) invalidPassword,
     required TResult Function(T failedValue) invalidOtp,
+    required TResult Function(T failedValue) invalidFoodName,
+    required TResult Function(T failedValue) invalidFoodPrice,
+    required TResult Function(T failedValue) invalidFoodDescription,
   }) {
     return invalidOtp(failedValue);
   }
@@ -475,6 +535,9 @@ class _$InvalidOtpImpl<T> implements InvalidOtp<T> {
     TResult? Function(T failedValue)? invalidPhoneNumber,
     TResult? Function(T failedValue)? invalidPassword,
     TResult? Function(T failedValue)? invalidOtp,
+    TResult? Function(T failedValue)? invalidFoodName,
+    TResult? Function(T failedValue)? invalidFoodPrice,
+    TResult? Function(T failedValue)? invalidFoodDescription,
   }) {
     return invalidOtp?.call(failedValue);
   }
@@ -485,6 +548,9 @@ class _$InvalidOtpImpl<T> implements InvalidOtp<T> {
     TResult Function(T failedValue)? invalidPhoneNumber,
     TResult Function(T failedValue)? invalidPassword,
     TResult Function(T failedValue)? invalidOtp,
+    TResult Function(T failedValue)? invalidFoodName,
+    TResult Function(T failedValue)? invalidFoodPrice,
+    TResult Function(T failedValue)? invalidFoodDescription,
     required TResult orElse(),
   }) {
     if (invalidOtp != null) {
@@ -499,6 +565,10 @@ class _$InvalidOtpImpl<T> implements InvalidOtp<T> {
     required TResult Function(InvalidPhoneNumber<T> value) invalidPhoneNumber,
     required TResult Function(InvalidPassword<T> value) invalidPassword,
     required TResult Function(InvalidOtp<T> value) invalidOtp,
+    required TResult Function(InvalidFoodName<T> value) invalidFoodName,
+    required TResult Function(InvalidFoodPrice<T> value) invalidFoodPrice,
+    required TResult Function(InvalidFoodDescription<T> value)
+        invalidFoodDescription,
   }) {
     return invalidOtp(this);
   }
@@ -509,6 +579,9 @@ class _$InvalidOtpImpl<T> implements InvalidOtp<T> {
     TResult? Function(InvalidPhoneNumber<T> value)? invalidPhoneNumber,
     TResult? Function(InvalidPassword<T> value)? invalidPassword,
     TResult? Function(InvalidOtp<T> value)? invalidOtp,
+    TResult? Function(InvalidFoodName<T> value)? invalidFoodName,
+    TResult? Function(InvalidFoodPrice<T> value)? invalidFoodPrice,
+    TResult? Function(InvalidFoodDescription<T> value)? invalidFoodDescription,
   }) {
     return invalidOtp?.call(this);
   }
@@ -519,6 +592,9 @@ class _$InvalidOtpImpl<T> implements InvalidOtp<T> {
     TResult Function(InvalidPhoneNumber<T> value)? invalidPhoneNumber,
     TResult Function(InvalidPassword<T> value)? invalidPassword,
     TResult Function(InvalidOtp<T> value)? invalidOtp,
+    TResult Function(InvalidFoodName<T> value)? invalidFoodName,
+    TResult Function(InvalidFoodPrice<T> value)? invalidFoodPrice,
+    TResult Function(InvalidFoodDescription<T> value)? invalidFoodDescription,
     required TResult orElse(),
   }) {
     if (invalidOtp != null) {
@@ -538,4 +614,504 @@ abstract class InvalidOtp<T> implements ValueFailure<T> {
   @JsonKey(ignore: true)
   _$$InvalidOtpImplCopyWith<T, _$InvalidOtpImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$InvalidFoodNameImplCopyWith<T, $Res>
+    implements $ValueFailureCopyWith<T, $Res> {
+  factory _$$InvalidFoodNameImplCopyWith(_$InvalidFoodNameImpl<T> value,
+          $Res Function(_$InvalidFoodNameImpl<T>) then) =
+      __$$InvalidFoodNameImplCopyWithImpl<T, $Res>;
+  @override
+  @useResult
+  $Res call({T failedValue});
+}
+
+/// @nodoc
+class __$$InvalidFoodNameImplCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$InvalidFoodNameImpl<T>>
+    implements _$$InvalidFoodNameImplCopyWith<T, $Res> {
+  __$$InvalidFoodNameImplCopyWithImpl(_$InvalidFoodNameImpl<T> _value,
+      $Res Function(_$InvalidFoodNameImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? failedValue = freezed,
+  }) {
+    return _then(_$InvalidFoodNameImpl<T>(
+      failedValue: freezed == failedValue
+          ? _value.failedValue
+          : failedValue // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$InvalidFoodNameImpl<T> implements InvalidFoodName<T> {
+  const _$InvalidFoodNameImpl({required this.failedValue});
+
+  @override
+  final T failedValue;
+
+  @override
+  String toString() {
+    return 'ValueFailure<$T>.invalidFoodName(failedValue: $failedValue)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$InvalidFoodNameImpl<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$InvalidFoodNameImplCopyWith<T, _$InvalidFoodNameImpl<T>> get copyWith =>
+      __$$InvalidFoodNameImplCopyWithImpl<T, _$InvalidFoodNameImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(T failedValue) invalidPhoneNumber,
+    required TResult Function(T failedValue) invalidPassword,
+    required TResult Function(T failedValue) invalidOtp,
+    required TResult Function(T failedValue) invalidFoodName,
+    required TResult Function(T failedValue) invalidFoodPrice,
+    required TResult Function(T failedValue) invalidFoodDescription,
+  }) {
+    return invalidFoodName(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(T failedValue)? invalidPhoneNumber,
+    TResult? Function(T failedValue)? invalidPassword,
+    TResult? Function(T failedValue)? invalidOtp,
+    TResult? Function(T failedValue)? invalidFoodName,
+    TResult? Function(T failedValue)? invalidFoodPrice,
+    TResult? Function(T failedValue)? invalidFoodDescription,
+  }) {
+    return invalidFoodName?.call(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidPhoneNumber,
+    TResult Function(T failedValue)? invalidPassword,
+    TResult Function(T failedValue)? invalidOtp,
+    TResult Function(T failedValue)? invalidFoodName,
+    TResult Function(T failedValue)? invalidFoodPrice,
+    TResult Function(T failedValue)? invalidFoodDescription,
+    required TResult orElse(),
+  }) {
+    if (invalidFoodName != null) {
+      return invalidFoodName(failedValue);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(InvalidPhoneNumber<T> value) invalidPhoneNumber,
+    required TResult Function(InvalidPassword<T> value) invalidPassword,
+    required TResult Function(InvalidOtp<T> value) invalidOtp,
+    required TResult Function(InvalidFoodName<T> value) invalidFoodName,
+    required TResult Function(InvalidFoodPrice<T> value) invalidFoodPrice,
+    required TResult Function(InvalidFoodDescription<T> value)
+        invalidFoodDescription,
+  }) {
+    return invalidFoodName(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(InvalidPhoneNumber<T> value)? invalidPhoneNumber,
+    TResult? Function(InvalidPassword<T> value)? invalidPassword,
+    TResult? Function(InvalidOtp<T> value)? invalidOtp,
+    TResult? Function(InvalidFoodName<T> value)? invalidFoodName,
+    TResult? Function(InvalidFoodPrice<T> value)? invalidFoodPrice,
+    TResult? Function(InvalidFoodDescription<T> value)? invalidFoodDescription,
+  }) {
+    return invalidFoodName?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InvalidPhoneNumber<T> value)? invalidPhoneNumber,
+    TResult Function(InvalidPassword<T> value)? invalidPassword,
+    TResult Function(InvalidOtp<T> value)? invalidOtp,
+    TResult Function(InvalidFoodName<T> value)? invalidFoodName,
+    TResult Function(InvalidFoodPrice<T> value)? invalidFoodPrice,
+    TResult Function(InvalidFoodDescription<T> value)? invalidFoodDescription,
+    required TResult orElse(),
+  }) {
+    if (invalidFoodName != null) {
+      return invalidFoodName(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class InvalidFoodName<T> implements ValueFailure<T> {
+  const factory InvalidFoodName({required final T failedValue}) =
+      _$InvalidFoodNameImpl<T>;
+
+  @override
+  T get failedValue;
+  @override
+  @JsonKey(ignore: true)
+  _$$InvalidFoodNameImplCopyWith<T, _$InvalidFoodNameImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$InvalidFoodPriceImplCopyWith<T, $Res>
+    implements $ValueFailureCopyWith<T, $Res> {
+  factory _$$InvalidFoodPriceImplCopyWith(_$InvalidFoodPriceImpl<T> value,
+          $Res Function(_$InvalidFoodPriceImpl<T>) then) =
+      __$$InvalidFoodPriceImplCopyWithImpl<T, $Res>;
+  @override
+  @useResult
+  $Res call({T failedValue});
+}
+
+/// @nodoc
+class __$$InvalidFoodPriceImplCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$InvalidFoodPriceImpl<T>>
+    implements _$$InvalidFoodPriceImplCopyWith<T, $Res> {
+  __$$InvalidFoodPriceImplCopyWithImpl(_$InvalidFoodPriceImpl<T> _value,
+      $Res Function(_$InvalidFoodPriceImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? failedValue = freezed,
+  }) {
+    return _then(_$InvalidFoodPriceImpl<T>(
+      failedValue: freezed == failedValue
+          ? _value.failedValue
+          : failedValue // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$InvalidFoodPriceImpl<T> implements InvalidFoodPrice<T> {
+  const _$InvalidFoodPriceImpl({required this.failedValue});
+
+  @override
+  final T failedValue;
+
+  @override
+  String toString() {
+    return 'ValueFailure<$T>.invalidFoodPrice(failedValue: $failedValue)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$InvalidFoodPriceImpl<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$InvalidFoodPriceImplCopyWith<T, _$InvalidFoodPriceImpl<T>> get copyWith =>
+      __$$InvalidFoodPriceImplCopyWithImpl<T, _$InvalidFoodPriceImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(T failedValue) invalidPhoneNumber,
+    required TResult Function(T failedValue) invalidPassword,
+    required TResult Function(T failedValue) invalidOtp,
+    required TResult Function(T failedValue) invalidFoodName,
+    required TResult Function(T failedValue) invalidFoodPrice,
+    required TResult Function(T failedValue) invalidFoodDescription,
+  }) {
+    return invalidFoodPrice(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(T failedValue)? invalidPhoneNumber,
+    TResult? Function(T failedValue)? invalidPassword,
+    TResult? Function(T failedValue)? invalidOtp,
+    TResult? Function(T failedValue)? invalidFoodName,
+    TResult? Function(T failedValue)? invalidFoodPrice,
+    TResult? Function(T failedValue)? invalidFoodDescription,
+  }) {
+    return invalidFoodPrice?.call(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidPhoneNumber,
+    TResult Function(T failedValue)? invalidPassword,
+    TResult Function(T failedValue)? invalidOtp,
+    TResult Function(T failedValue)? invalidFoodName,
+    TResult Function(T failedValue)? invalidFoodPrice,
+    TResult Function(T failedValue)? invalidFoodDescription,
+    required TResult orElse(),
+  }) {
+    if (invalidFoodPrice != null) {
+      return invalidFoodPrice(failedValue);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(InvalidPhoneNumber<T> value) invalidPhoneNumber,
+    required TResult Function(InvalidPassword<T> value) invalidPassword,
+    required TResult Function(InvalidOtp<T> value) invalidOtp,
+    required TResult Function(InvalidFoodName<T> value) invalidFoodName,
+    required TResult Function(InvalidFoodPrice<T> value) invalidFoodPrice,
+    required TResult Function(InvalidFoodDescription<T> value)
+        invalidFoodDescription,
+  }) {
+    return invalidFoodPrice(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(InvalidPhoneNumber<T> value)? invalidPhoneNumber,
+    TResult? Function(InvalidPassword<T> value)? invalidPassword,
+    TResult? Function(InvalidOtp<T> value)? invalidOtp,
+    TResult? Function(InvalidFoodName<T> value)? invalidFoodName,
+    TResult? Function(InvalidFoodPrice<T> value)? invalidFoodPrice,
+    TResult? Function(InvalidFoodDescription<T> value)? invalidFoodDescription,
+  }) {
+    return invalidFoodPrice?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InvalidPhoneNumber<T> value)? invalidPhoneNumber,
+    TResult Function(InvalidPassword<T> value)? invalidPassword,
+    TResult Function(InvalidOtp<T> value)? invalidOtp,
+    TResult Function(InvalidFoodName<T> value)? invalidFoodName,
+    TResult Function(InvalidFoodPrice<T> value)? invalidFoodPrice,
+    TResult Function(InvalidFoodDescription<T> value)? invalidFoodDescription,
+    required TResult orElse(),
+  }) {
+    if (invalidFoodPrice != null) {
+      return invalidFoodPrice(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class InvalidFoodPrice<T> implements ValueFailure<T> {
+  const factory InvalidFoodPrice({required final T failedValue}) =
+      _$InvalidFoodPriceImpl<T>;
+
+  @override
+  T get failedValue;
+  @override
+  @JsonKey(ignore: true)
+  _$$InvalidFoodPriceImplCopyWith<T, _$InvalidFoodPriceImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$InvalidFoodDescriptionImplCopyWith<T, $Res>
+    implements $ValueFailureCopyWith<T, $Res> {
+  factory _$$InvalidFoodDescriptionImplCopyWith(
+          _$InvalidFoodDescriptionImpl<T> value,
+          $Res Function(_$InvalidFoodDescriptionImpl<T>) then) =
+      __$$InvalidFoodDescriptionImplCopyWithImpl<T, $Res>;
+  @override
+  @useResult
+  $Res call({T failedValue});
+}
+
+/// @nodoc
+class __$$InvalidFoodDescriptionImplCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$InvalidFoodDescriptionImpl<T>>
+    implements _$$InvalidFoodDescriptionImplCopyWith<T, $Res> {
+  __$$InvalidFoodDescriptionImplCopyWithImpl(
+      _$InvalidFoodDescriptionImpl<T> _value,
+      $Res Function(_$InvalidFoodDescriptionImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? failedValue = freezed,
+  }) {
+    return _then(_$InvalidFoodDescriptionImpl<T>(
+      failedValue: freezed == failedValue
+          ? _value.failedValue
+          : failedValue // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$InvalidFoodDescriptionImpl<T> implements InvalidFoodDescription<T> {
+  const _$InvalidFoodDescriptionImpl({required this.failedValue});
+
+  @override
+  final T failedValue;
+
+  @override
+  String toString() {
+    return 'ValueFailure<$T>.invalidFoodDescription(failedValue: $failedValue)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$InvalidFoodDescriptionImpl<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$InvalidFoodDescriptionImplCopyWith<T, _$InvalidFoodDescriptionImpl<T>>
+      get copyWith => __$$InvalidFoodDescriptionImplCopyWithImpl<T,
+          _$InvalidFoodDescriptionImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(T failedValue) invalidPhoneNumber,
+    required TResult Function(T failedValue) invalidPassword,
+    required TResult Function(T failedValue) invalidOtp,
+    required TResult Function(T failedValue) invalidFoodName,
+    required TResult Function(T failedValue) invalidFoodPrice,
+    required TResult Function(T failedValue) invalidFoodDescription,
+  }) {
+    return invalidFoodDescription(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(T failedValue)? invalidPhoneNumber,
+    TResult? Function(T failedValue)? invalidPassword,
+    TResult? Function(T failedValue)? invalidOtp,
+    TResult? Function(T failedValue)? invalidFoodName,
+    TResult? Function(T failedValue)? invalidFoodPrice,
+    TResult? Function(T failedValue)? invalidFoodDescription,
+  }) {
+    return invalidFoodDescription?.call(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidPhoneNumber,
+    TResult Function(T failedValue)? invalidPassword,
+    TResult Function(T failedValue)? invalidOtp,
+    TResult Function(T failedValue)? invalidFoodName,
+    TResult Function(T failedValue)? invalidFoodPrice,
+    TResult Function(T failedValue)? invalidFoodDescription,
+    required TResult orElse(),
+  }) {
+    if (invalidFoodDescription != null) {
+      return invalidFoodDescription(failedValue);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(InvalidPhoneNumber<T> value) invalidPhoneNumber,
+    required TResult Function(InvalidPassword<T> value) invalidPassword,
+    required TResult Function(InvalidOtp<T> value) invalidOtp,
+    required TResult Function(InvalidFoodName<T> value) invalidFoodName,
+    required TResult Function(InvalidFoodPrice<T> value) invalidFoodPrice,
+    required TResult Function(InvalidFoodDescription<T> value)
+        invalidFoodDescription,
+  }) {
+    return invalidFoodDescription(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(InvalidPhoneNumber<T> value)? invalidPhoneNumber,
+    TResult? Function(InvalidPassword<T> value)? invalidPassword,
+    TResult? Function(InvalidOtp<T> value)? invalidOtp,
+    TResult? Function(InvalidFoodName<T> value)? invalidFoodName,
+    TResult? Function(InvalidFoodPrice<T> value)? invalidFoodPrice,
+    TResult? Function(InvalidFoodDescription<T> value)? invalidFoodDescription,
+  }) {
+    return invalidFoodDescription?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InvalidPhoneNumber<T> value)? invalidPhoneNumber,
+    TResult Function(InvalidPassword<T> value)? invalidPassword,
+    TResult Function(InvalidOtp<T> value)? invalidOtp,
+    TResult Function(InvalidFoodName<T> value)? invalidFoodName,
+    TResult Function(InvalidFoodPrice<T> value)? invalidFoodPrice,
+    TResult Function(InvalidFoodDescription<T> value)? invalidFoodDescription,
+    required TResult orElse(),
+  }) {
+    if (invalidFoodDescription != null) {
+      return invalidFoodDescription(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class InvalidFoodDescription<T> implements ValueFailure<T> {
+  const factory InvalidFoodDescription({required final T failedValue}) =
+      _$InvalidFoodDescriptionImpl<T>;
+
+  @override
+  T get failedValue;
+  @override
+  @JsonKey(ignore: true)
+  _$$InvalidFoodDescriptionImplCopyWith<T, _$InvalidFoodDescriptionImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }
