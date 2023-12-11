@@ -4,10 +4,8 @@ import 'package:eatplek_agent/application/food/food_bloc.dart';
 import 'package:eatplek_agent/application/order/order_bloc.dart';
 import 'package:eatplek_agent/domain/core/di/injection.dart';
 import 'package:eatplek_agent/presentation/core/utils/color/app_color.dart';
-import 'package:eatplek_agent/presentation/core/utils/padding/app_padding.dart';
 import 'package:eatplek_agent/presentation/core/utils/sized_box/app_sized_box.dart';
 import 'package:eatplek_agent/presentation/core/utils/text_style/app_text_style.dart';
-import 'package:eatplek_agent/presentation/edit/widgets/edit_over_view_page.dart';
 import 'package:eatplek_agent/presentation/order/widgets/order_over_view_page.dart';
 import 'package:eatplek_agent/presentation/router/app_router.gr.dart';
 import 'package:flutter/material.dart';
@@ -18,9 +16,9 @@ import 'package:lottie/lottie.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class HomeMobileView extends HookWidget {
-   HomeMobileView({super.key});
-  
-  AudioPlayer audioPlayer = AudioPlayer();
+  HomeMobileView({super.key});
+
+  final AudioPlayer audioPlayer = AudioPlayer();
   @override
   Widget build(BuildContext context) {
     final appBarTitle = useState('Pending Orders');
@@ -28,17 +26,17 @@ class HomeMobileView extends HookWidget {
       backgroundColor: kSecondaryColor,
       drawer: appDrawer(context: context, appBarTitle: appBarTitle),
       appBar: appAppBar(appBarTitle: appBarTitle),
-      body: appMobilePrimaryBody(),
+      body: appMobilePrimaryBody(appBarTitle: appBarTitle),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
-         await audioPlayer.play(AssetSource('audio/booking_audio.wav'));
+          await audioPlayer.play(AssetSource('audio/booking_audio.wav'));
         },
         child: const Icon(Icons.add),
       ),
     );
   }
 
-  BlocConsumer<OrderBloc, OrderState> appMobilePrimaryBody() {
+  BlocConsumer<OrderBloc, OrderState> appMobilePrimaryBody({required ValueNotifier<String> appBarTitle}) {
     return BlocConsumer<OrderBloc, OrderState>(
       listener: (context, state) {},
       builder: (context, state) {
@@ -73,7 +71,7 @@ class HomeMobileView extends HookWidget {
                             return OrderOverviewPage(
                               width: 500,
                               state: state.loaded[index],
-                              isPending: false,
+                              isPending: appBarTitle.value == 'Pending Orders' ? true : false,
                             );
                           }),
                         ),
@@ -86,70 +84,6 @@ class HomeMobileView extends HookWidget {
     );
   }
 
-  BlocConsumer<FoodBloc, FoodState> appMobileBody() {
-    return BlocConsumer<FoodBloc, FoodState>(
-      listener: (context, state) {},
-      builder: (context, state) {
-        final length = state.maybeMap(
-          orElse: () => 0,
-          initial: (state) => 0,
-          loadiingInProgress: (state) => 0,
-          loadSuccess: (state) => state.foodList.length,
-          loadFailure: (state) => 0,
-        );
-        return ListView.builder(
-          itemCount: length,
-          itemBuilder: (BuildContext context, int index) {
-            return state.maybeMap(
-              orElse: () => const Center(
-                child: Text('Error'),
-              ),
-              initial: (state) =>
-                  const Center(child: CircularProgressIndicator()),
-              loadiingInProgress: (state) =>
-                  const Center(child: CircularProgressIndicator()),
-              loadSuccess: (state) {
-                final foodItems = state.foodList[index].foodItems;
-                if (foodItems != null && foodItems.isNotEmpty) {
-                  return Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: kPadding10,
-                        child: Text(
-                          state.foodList[index].foodItems != null
-                              ? state.foodList[index].category ?? ''
-                              : '',
-                          style: kTextBodyStyle.copyWith(
-                            fontSize: 42.sp,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                      ...List.generate(foodItems.length, (foodIndex) {
-                        final foodItem = foodItems[foodIndex];
-                        return EditOverviewPage(
-                            width: 1.sw,
-                            contentPadding: kPadding10,
-                            foodItem: foodItem);
-                      }),
-                    ],
-                  );
-                } else {
-                  return const Center(
-                    child: Text('No Data'),
-                  );
-                }
-              },
-              loadFailure: (state) => const Center(
-                child: Text('Error'),
-              ),
-            );
-          },
-        );
-      },
-    );
-  }
 
   AppBar appAppBar({required ValueNotifier<String> appBarTitle}) {
     return AppBar(
@@ -327,20 +261,7 @@ class HomeMobileView extends HookWidget {
             ),
             ListTile(
               title: Text(
-                'Add Food Menu',
-                style: kTextBodyStyle.copyWith(
-                  fontSize: 34.sp,
-                ),
-              ),
-              trailing: const Icon(
-                Icons.arrow_forward_ios,
-                size: 15,
-              ),
-              onTap: () {},
-            ),
-            ListTile(
-              title: Text(
-                'Edit Food Menu',
+                'View All Food Menu',
                 style: kTextBodyStyle.copyWith(
                   fontSize: 34.sp,
                 ),
@@ -350,7 +271,22 @@ class HomeMobileView extends HookWidget {
                 size: 15,
               ),
               onTap: () {
-                context.router.push(const EditRoute());
+                context.router.push(const EditMobileView());
+              },
+            ),
+            ListTile(
+              title: Text(
+                'Add New Food Menu',
+                style: kTextBodyStyle.copyWith(
+                  fontSize: 34.sp,
+                ),
+              ),
+              trailing: const Icon(
+                Icons.arrow_forward_ios,
+                size: 15,
+              ),
+              onTap: () {
+                context.router.push(const CustomiseRoute());
               },
             ),
             const Divider(

@@ -21,4 +21,7 @@ class ValueFailure<T> with _$ValueFailure<T> {
   const factory ValueFailure.invalidFoodDescription({
     required T failedValue,
   }) = InvalidFoodDescription<T>;
+  const factory ValueFailure.invalidFoodCategory({
+    required T failedValue,
+  }) = InvalidFoodCategory<T>;
 }

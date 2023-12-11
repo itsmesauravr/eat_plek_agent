@@ -1,3 +1,4 @@
+import 'package:eatplek_agent/application/add/add_bloc.dart';
 import 'package:eatplek_agent/application/app/app_cubit.dart';
 import 'package:eatplek_agent/application/auth/auth_bloc.dart';
 import 'package:eatplek_agent/application/food/food_bloc.dart';
@@ -22,6 +23,7 @@ class AppWidget extends StatelessWidget {
         BlocProvider(create: (context) => getIt<FoodBloc>()),
         BlocProvider(create: (context) => getIt<OrderBloc>()),
         BlocProvider(create: (context) => getIt<StatusBloc>()),
+        BlocProvider(create: (context) => getIt<AddBloc>()),
       ],
       child: ScreenUtilInit(
         builder: (context, child) => MaterialApp.router(

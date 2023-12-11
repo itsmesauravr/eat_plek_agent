@@ -54,3 +54,13 @@ Either<ValueFailure<String>, String> validateFoodDescription (String input) {
     return left(ValueFailure.invalidFoodDescription(failedValue: input));
   }
 }
+
+Either<ValueFailure<String>, String> validateFoodCategory (String input) {
+  const foodCategoryRegex = r'^[a-zA-Z0-9가-힣ㄱ-ㅎㅏ-ㅣ]{1,20}$';
+  if (RegExp(foodCategoryRegex).hasMatch(input)) {
+    return right(input);
+  } else {
+    return left(ValueFailure.invalidFoodCategory(failedValue: input));
+  }
+}
+

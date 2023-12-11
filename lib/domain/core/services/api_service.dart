@@ -17,9 +17,17 @@ abstract class ApiService extends ChopperService {
   @Get(path: '/booking/get', headers: {'Content-Type': 'application/json'})
   Future<Response> getOrders(@Header('Authorization') String token);
   @Post(path: '/booking/accept')
-  Future<Response> acceptOrder(@Body() Map<String, dynamic> body, @Header('Authorization') String token);
+  Future<Response> acceptOrder(
+      @Body() Map<String, dynamic> body, @Header('Authorization') String token);
   @Post(path: '/category/addCategory')
-  Future<Response> addFood(@Body() Map<String, dynamic> body, @Header('Authorization') String token);
+  Future<Response> addFood(
+      @Body() Map<String, dynamic> body, @Header('Authorization') String token);
+  @Get(path: '/category/getCategories')
+  Future<Response> getCategories(@Header('Authorization') String token);
+  @Multipart()
+  @Post(path: '/food/uploadImage')
+  Future<Response> uploadImage(
+      @PartFile('image') String path);
 
   static ApiService create() {
     final client = ChopperClient(

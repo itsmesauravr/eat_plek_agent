@@ -35,33 +35,33 @@ class _OrderOverviewPageState extends State<OrderOverviewPage> {
   late ValueNotifier<Duration> timer;
   late StreamController<int> timerController;
   late int remainingSeconds;
-  @override
-  void initState() {
-    super.initState();
-    int initialSeconds = widget.state?.orderTimer ?? 0;
-    remainingSeconds = initialSeconds;
-    timer = ValueNotifier<Duration>(Duration(seconds: initialSeconds));
-    timerController = StreamController<int>();
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   int initialSeconds = widget.state?.orderTimer ?? 0;
+  //   remainingSeconds = initialSeconds;
+  //   timer = ValueNotifier<Duration>(Duration(seconds: initialSeconds));
+  //   timerController = StreamController<int>();
 
-    Timer.periodic(const Duration(seconds: 1), (timer) {
-      timerController.add(timer.tick);
-    });
+  //   Timer.periodic(const Duration(seconds: 1), (timer) {
+  //     timerController.add(timer.tick);
+  //   });
 
-    timerController.stream.listen((elapsedSeconds) {
-      if (remainingSeconds > 0) {
-        remainingSeconds--;
-        timer.value = Duration(seconds: remainingSeconds);
-      } else {
-        timerController.close();
-      }
-    });
-  }
+  //   timerController.stream.listen((elapsedSeconds) {
+  //     if (remainingSeconds > 0) {
+  //       remainingSeconds--;
+  //       timer.value = Duration(seconds: remainingSeconds);
+  //     } else {
+  //       timerController.close();
+  //     }
+  //   });
+  // }
 
-  @override
-  void dispose() {
-    super.dispose();
-    timerController.close();
-  }
+  // @override
+  // void dispose() {
+  //   super.dispose();
+  //   timerController.close();
+  // }
 
   @override
   Widget build(BuildContext context) {

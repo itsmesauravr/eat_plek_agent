@@ -16,7 +16,8 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$AppState {
-  File get image => throw _privateConstructorUsedError;
+  bool get isLoading => throw _privateConstructorUsedError;
+  String get image => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AppStateCopyWith<AppState> get copyWith =>
@@ -28,7 +29,7 @@ abstract class $AppStateCopyWith<$Res> {
   factory $AppStateCopyWith(AppState value, $Res Function(AppState) then) =
       _$AppStateCopyWithImpl<$Res, AppState>;
   @useResult
-  $Res call({File image});
+  $Res call({bool isLoading, String image});
 }
 
 /// @nodoc
@@ -44,13 +45,18 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? isLoading = null,
     Object? image = null,
   }) {
     return _then(_value.copyWith(
+      isLoading: null == isLoading
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
       image: null == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
-              as File,
+              as String,
     ) as $Val);
   }
 }
@@ -63,7 +69,7 @@ abstract class _$$AppStateImplCopyWith<$Res>
       __$$AppStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({File image});
+  $Res call({bool isLoading, String image});
 }
 
 /// @nodoc
@@ -77,28 +83,44 @@ class __$$AppStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? isLoading = null,
     Object? image = null,
   }) {
     return _then(_$AppStateImpl(
+      isLoading: null == isLoading
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
       image: null == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
-              as File,
+              as String,
     ));
   }
 }
 
 /// @nodoc
 
-class _$AppStateImpl implements _AppState {
-  const _$AppStateImpl({required this.image});
+class _$AppStateImpl with DiagnosticableTreeMixin implements _AppState {
+  const _$AppStateImpl({required this.isLoading, required this.image});
 
   @override
-  final File image;
+  final bool isLoading;
+  @override
+  final String image;
 
   @override
-  String toString() {
-    return 'AppState(image: $image)';
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AppState(isLoading: $isLoading, image: $image)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AppState'))
+      ..add(DiagnosticsProperty('isLoading', isLoading))
+      ..add(DiagnosticsProperty('image', image));
   }
 
   @override
@@ -106,11 +128,13 @@ class _$AppStateImpl implements _AppState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AppStateImpl &&
+            (identical(other.isLoading, isLoading) ||
+                other.isLoading == isLoading) &&
             (identical(other.image, image) || other.image == image));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, image);
+  int get hashCode => Object.hash(runtimeType, isLoading, image);
 
   @JsonKey(ignore: true)
   @override
@@ -120,10 +144,14 @@ class _$AppStateImpl implements _AppState {
 }
 
 abstract class _AppState implements AppState {
-  const factory _AppState({required final File image}) = _$AppStateImpl;
+  const factory _AppState(
+      {required final bool isLoading,
+      required final String image}) = _$AppStateImpl;
 
   @override
-  File get image;
+  bool get isLoading;
+  @override
+  String get image;
   @override
   @JsonKey(ignore: true)
   _$$AppStateImplCopyWith<_$AppStateImpl> get copyWith =>

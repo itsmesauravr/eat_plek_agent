@@ -44,3 +44,17 @@ class FoodDescription extends ValueObject<String> {
 
   const FoodDescription._(this.value);
 }
+
+class FoodCategory extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+
+  factory FoodCategory(String? input) {
+    assert(input != null);
+    return FoodCategory._(
+      validateFoodCategory(input!),
+    );
+  }
+
+  const FoodCategory._(this.value);
+}

@@ -21,8 +21,10 @@ mixin _$AddEvent {
     required TResult Function(String foodNameStr) foodNameChanged,
     required TResult Function(String foodPriceStr) foodPriceChanged,
     required TResult Function(String foodDescriptionStr) foodDescriptionChanged,
-    required TResult Function(FoodName foodName, FoodPrice foodPrice)
-        addFoodPressed,
+    required TResult Function(String foodImageStr) foodImageChanged,
+    required TResult Function(String foodCatoryStr) foodCatoryChanged,
+    required TResult Function() addFoodPressed,
+    required TResult Function() getCategoriesPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,7 +32,10 @@ mixin _$AddEvent {
     TResult? Function(String foodNameStr)? foodNameChanged,
     TResult? Function(String foodPriceStr)? foodPriceChanged,
     TResult? Function(String foodDescriptionStr)? foodDescriptionChanged,
-    TResult? Function(FoodName foodName, FoodPrice foodPrice)? addFoodPressed,
+    TResult? Function(String foodImageStr)? foodImageChanged,
+    TResult? Function(String foodCatoryStr)? foodCatoryChanged,
+    TResult? Function()? addFoodPressed,
+    TResult? Function()? getCategoriesPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,7 +43,10 @@ mixin _$AddEvent {
     TResult Function(String foodNameStr)? foodNameChanged,
     TResult Function(String foodPriceStr)? foodPriceChanged,
     TResult Function(String foodDescriptionStr)? foodDescriptionChanged,
-    TResult Function(FoodName foodName, FoodPrice foodPrice)? addFoodPressed,
+    TResult Function(String foodImageStr)? foodImageChanged,
+    TResult Function(String foodCatoryStr)? foodCatoryChanged,
+    TResult Function()? addFoodPressed,
+    TResult Function()? getCategoriesPressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -48,7 +56,10 @@ mixin _$AddEvent {
     required TResult Function(_FoodPriceChanged value) foodPriceChanged,
     required TResult Function(_FoodDescriptionChanged value)
         foodDescriptionChanged,
+    required TResult Function(_FoodImageChanged value) foodImageChanged,
+    required TResult Function(_FoodCatoryChanged value) foodCatoryChanged,
     required TResult Function(_AddFoodPressed value) addFoodPressed,
+    required TResult Function(_GetCategoriesPressed value) getCategoriesPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,7 +67,10 @@ mixin _$AddEvent {
     TResult? Function(_FoodNameChanged value)? foodNameChanged,
     TResult? Function(_FoodPriceChanged value)? foodPriceChanged,
     TResult? Function(_FoodDescriptionChanged value)? foodDescriptionChanged,
+    TResult? Function(_FoodImageChanged value)? foodImageChanged,
+    TResult? Function(_FoodCatoryChanged value)? foodCatoryChanged,
     TResult? Function(_AddFoodPressed value)? addFoodPressed,
+    TResult? Function(_GetCategoriesPressed value)? getCategoriesPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -64,7 +78,10 @@ mixin _$AddEvent {
     TResult Function(_FoodNameChanged value)? foodNameChanged,
     TResult Function(_FoodPriceChanged value)? foodPriceChanged,
     TResult Function(_FoodDescriptionChanged value)? foodDescriptionChanged,
+    TResult Function(_FoodImageChanged value)? foodImageChanged,
+    TResult Function(_FoodCatoryChanged value)? foodCatoryChanged,
     TResult Function(_AddFoodPressed value)? addFoodPressed,
+    TResult Function(_GetCategoriesPressed value)? getCategoriesPressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -156,8 +173,10 @@ class _$FoodNameChangedImpl implements _FoodNameChanged {
     required TResult Function(String foodNameStr) foodNameChanged,
     required TResult Function(String foodPriceStr) foodPriceChanged,
     required TResult Function(String foodDescriptionStr) foodDescriptionChanged,
-    required TResult Function(FoodName foodName, FoodPrice foodPrice)
-        addFoodPressed,
+    required TResult Function(String foodImageStr) foodImageChanged,
+    required TResult Function(String foodCatoryStr) foodCatoryChanged,
+    required TResult Function() addFoodPressed,
+    required TResult Function() getCategoriesPressed,
   }) {
     return foodNameChanged(foodNameStr);
   }
@@ -168,7 +187,10 @@ class _$FoodNameChangedImpl implements _FoodNameChanged {
     TResult? Function(String foodNameStr)? foodNameChanged,
     TResult? Function(String foodPriceStr)? foodPriceChanged,
     TResult? Function(String foodDescriptionStr)? foodDescriptionChanged,
-    TResult? Function(FoodName foodName, FoodPrice foodPrice)? addFoodPressed,
+    TResult? Function(String foodImageStr)? foodImageChanged,
+    TResult? Function(String foodCatoryStr)? foodCatoryChanged,
+    TResult? Function()? addFoodPressed,
+    TResult? Function()? getCategoriesPressed,
   }) {
     return foodNameChanged?.call(foodNameStr);
   }
@@ -179,7 +201,10 @@ class _$FoodNameChangedImpl implements _FoodNameChanged {
     TResult Function(String foodNameStr)? foodNameChanged,
     TResult Function(String foodPriceStr)? foodPriceChanged,
     TResult Function(String foodDescriptionStr)? foodDescriptionChanged,
-    TResult Function(FoodName foodName, FoodPrice foodPrice)? addFoodPressed,
+    TResult Function(String foodImageStr)? foodImageChanged,
+    TResult Function(String foodCatoryStr)? foodCatoryChanged,
+    TResult Function()? addFoodPressed,
+    TResult Function()? getCategoriesPressed,
     required TResult orElse(),
   }) {
     if (foodNameChanged != null) {
@@ -195,7 +220,10 @@ class _$FoodNameChangedImpl implements _FoodNameChanged {
     required TResult Function(_FoodPriceChanged value) foodPriceChanged,
     required TResult Function(_FoodDescriptionChanged value)
         foodDescriptionChanged,
+    required TResult Function(_FoodImageChanged value) foodImageChanged,
+    required TResult Function(_FoodCatoryChanged value) foodCatoryChanged,
     required TResult Function(_AddFoodPressed value) addFoodPressed,
+    required TResult Function(_GetCategoriesPressed value) getCategoriesPressed,
   }) {
     return foodNameChanged(this);
   }
@@ -206,7 +234,10 @@ class _$FoodNameChangedImpl implements _FoodNameChanged {
     TResult? Function(_FoodNameChanged value)? foodNameChanged,
     TResult? Function(_FoodPriceChanged value)? foodPriceChanged,
     TResult? Function(_FoodDescriptionChanged value)? foodDescriptionChanged,
+    TResult? Function(_FoodImageChanged value)? foodImageChanged,
+    TResult? Function(_FoodCatoryChanged value)? foodCatoryChanged,
     TResult? Function(_AddFoodPressed value)? addFoodPressed,
+    TResult? Function(_GetCategoriesPressed value)? getCategoriesPressed,
   }) {
     return foodNameChanged?.call(this);
   }
@@ -217,7 +248,10 @@ class _$FoodNameChangedImpl implements _FoodNameChanged {
     TResult Function(_FoodNameChanged value)? foodNameChanged,
     TResult Function(_FoodPriceChanged value)? foodPriceChanged,
     TResult Function(_FoodDescriptionChanged value)? foodDescriptionChanged,
+    TResult Function(_FoodImageChanged value)? foodImageChanged,
+    TResult Function(_FoodCatoryChanged value)? foodCatoryChanged,
     TResult Function(_AddFoodPressed value)? addFoodPressed,
+    TResult Function(_GetCategoriesPressed value)? getCategoriesPressed,
     required TResult orElse(),
   }) {
     if (foodNameChanged != null) {
@@ -306,8 +340,10 @@ class _$FoodPriceChangedImpl implements _FoodPriceChanged {
     required TResult Function(String foodNameStr) foodNameChanged,
     required TResult Function(String foodPriceStr) foodPriceChanged,
     required TResult Function(String foodDescriptionStr) foodDescriptionChanged,
-    required TResult Function(FoodName foodName, FoodPrice foodPrice)
-        addFoodPressed,
+    required TResult Function(String foodImageStr) foodImageChanged,
+    required TResult Function(String foodCatoryStr) foodCatoryChanged,
+    required TResult Function() addFoodPressed,
+    required TResult Function() getCategoriesPressed,
   }) {
     return foodPriceChanged(foodPriceStr);
   }
@@ -318,7 +354,10 @@ class _$FoodPriceChangedImpl implements _FoodPriceChanged {
     TResult? Function(String foodNameStr)? foodNameChanged,
     TResult? Function(String foodPriceStr)? foodPriceChanged,
     TResult? Function(String foodDescriptionStr)? foodDescriptionChanged,
-    TResult? Function(FoodName foodName, FoodPrice foodPrice)? addFoodPressed,
+    TResult? Function(String foodImageStr)? foodImageChanged,
+    TResult? Function(String foodCatoryStr)? foodCatoryChanged,
+    TResult? Function()? addFoodPressed,
+    TResult? Function()? getCategoriesPressed,
   }) {
     return foodPriceChanged?.call(foodPriceStr);
   }
@@ -329,7 +368,10 @@ class _$FoodPriceChangedImpl implements _FoodPriceChanged {
     TResult Function(String foodNameStr)? foodNameChanged,
     TResult Function(String foodPriceStr)? foodPriceChanged,
     TResult Function(String foodDescriptionStr)? foodDescriptionChanged,
-    TResult Function(FoodName foodName, FoodPrice foodPrice)? addFoodPressed,
+    TResult Function(String foodImageStr)? foodImageChanged,
+    TResult Function(String foodCatoryStr)? foodCatoryChanged,
+    TResult Function()? addFoodPressed,
+    TResult Function()? getCategoriesPressed,
     required TResult orElse(),
   }) {
     if (foodPriceChanged != null) {
@@ -345,7 +387,10 @@ class _$FoodPriceChangedImpl implements _FoodPriceChanged {
     required TResult Function(_FoodPriceChanged value) foodPriceChanged,
     required TResult Function(_FoodDescriptionChanged value)
         foodDescriptionChanged,
+    required TResult Function(_FoodImageChanged value) foodImageChanged,
+    required TResult Function(_FoodCatoryChanged value) foodCatoryChanged,
     required TResult Function(_AddFoodPressed value) addFoodPressed,
+    required TResult Function(_GetCategoriesPressed value) getCategoriesPressed,
   }) {
     return foodPriceChanged(this);
   }
@@ -356,7 +401,10 @@ class _$FoodPriceChangedImpl implements _FoodPriceChanged {
     TResult? Function(_FoodNameChanged value)? foodNameChanged,
     TResult? Function(_FoodPriceChanged value)? foodPriceChanged,
     TResult? Function(_FoodDescriptionChanged value)? foodDescriptionChanged,
+    TResult? Function(_FoodImageChanged value)? foodImageChanged,
+    TResult? Function(_FoodCatoryChanged value)? foodCatoryChanged,
     TResult? Function(_AddFoodPressed value)? addFoodPressed,
+    TResult? Function(_GetCategoriesPressed value)? getCategoriesPressed,
   }) {
     return foodPriceChanged?.call(this);
   }
@@ -367,7 +415,10 @@ class _$FoodPriceChangedImpl implements _FoodPriceChanged {
     TResult Function(_FoodNameChanged value)? foodNameChanged,
     TResult Function(_FoodPriceChanged value)? foodPriceChanged,
     TResult Function(_FoodDescriptionChanged value)? foodDescriptionChanged,
+    TResult Function(_FoodImageChanged value)? foodImageChanged,
+    TResult Function(_FoodCatoryChanged value)? foodCatoryChanged,
     TResult Function(_AddFoodPressed value)? addFoodPressed,
+    TResult Function(_GetCategoriesPressed value)? getCategoriesPressed,
     required TResult orElse(),
   }) {
     if (foodPriceChanged != null) {
@@ -458,8 +509,10 @@ class _$FoodDescriptionChangedImpl implements _FoodDescriptionChanged {
     required TResult Function(String foodNameStr) foodNameChanged,
     required TResult Function(String foodPriceStr) foodPriceChanged,
     required TResult Function(String foodDescriptionStr) foodDescriptionChanged,
-    required TResult Function(FoodName foodName, FoodPrice foodPrice)
-        addFoodPressed,
+    required TResult Function(String foodImageStr) foodImageChanged,
+    required TResult Function(String foodCatoryStr) foodCatoryChanged,
+    required TResult Function() addFoodPressed,
+    required TResult Function() getCategoriesPressed,
   }) {
     return foodDescriptionChanged(foodDescriptionStr);
   }
@@ -470,7 +523,10 @@ class _$FoodDescriptionChangedImpl implements _FoodDescriptionChanged {
     TResult? Function(String foodNameStr)? foodNameChanged,
     TResult? Function(String foodPriceStr)? foodPriceChanged,
     TResult? Function(String foodDescriptionStr)? foodDescriptionChanged,
-    TResult? Function(FoodName foodName, FoodPrice foodPrice)? addFoodPressed,
+    TResult? Function(String foodImageStr)? foodImageChanged,
+    TResult? Function(String foodCatoryStr)? foodCatoryChanged,
+    TResult? Function()? addFoodPressed,
+    TResult? Function()? getCategoriesPressed,
   }) {
     return foodDescriptionChanged?.call(foodDescriptionStr);
   }
@@ -481,7 +537,10 @@ class _$FoodDescriptionChangedImpl implements _FoodDescriptionChanged {
     TResult Function(String foodNameStr)? foodNameChanged,
     TResult Function(String foodPriceStr)? foodPriceChanged,
     TResult Function(String foodDescriptionStr)? foodDescriptionChanged,
-    TResult Function(FoodName foodName, FoodPrice foodPrice)? addFoodPressed,
+    TResult Function(String foodImageStr)? foodImageChanged,
+    TResult Function(String foodCatoryStr)? foodCatoryChanged,
+    TResult Function()? addFoodPressed,
+    TResult Function()? getCategoriesPressed,
     required TResult orElse(),
   }) {
     if (foodDescriptionChanged != null) {
@@ -497,7 +556,10 @@ class _$FoodDescriptionChangedImpl implements _FoodDescriptionChanged {
     required TResult Function(_FoodPriceChanged value) foodPriceChanged,
     required TResult Function(_FoodDescriptionChanged value)
         foodDescriptionChanged,
+    required TResult Function(_FoodImageChanged value) foodImageChanged,
+    required TResult Function(_FoodCatoryChanged value) foodCatoryChanged,
     required TResult Function(_AddFoodPressed value) addFoodPressed,
+    required TResult Function(_GetCategoriesPressed value) getCategoriesPressed,
   }) {
     return foodDescriptionChanged(this);
   }
@@ -508,7 +570,10 @@ class _$FoodDescriptionChangedImpl implements _FoodDescriptionChanged {
     TResult? Function(_FoodNameChanged value)? foodNameChanged,
     TResult? Function(_FoodPriceChanged value)? foodPriceChanged,
     TResult? Function(_FoodDescriptionChanged value)? foodDescriptionChanged,
+    TResult? Function(_FoodImageChanged value)? foodImageChanged,
+    TResult? Function(_FoodCatoryChanged value)? foodCatoryChanged,
     TResult? Function(_AddFoodPressed value)? addFoodPressed,
+    TResult? Function(_GetCategoriesPressed value)? getCategoriesPressed,
   }) {
     return foodDescriptionChanged?.call(this);
   }
@@ -519,7 +584,10 @@ class _$FoodDescriptionChangedImpl implements _FoodDescriptionChanged {
     TResult Function(_FoodNameChanged value)? foodNameChanged,
     TResult Function(_FoodPriceChanged value)? foodPriceChanged,
     TResult Function(_FoodDescriptionChanged value)? foodDescriptionChanged,
+    TResult Function(_FoodImageChanged value)? foodImageChanged,
+    TResult Function(_FoodCatoryChanged value)? foodCatoryChanged,
     TResult Function(_AddFoodPressed value)? addFoodPressed,
+    TResult Function(_GetCategoriesPressed value)? getCategoriesPressed,
     required TResult orElse(),
   }) {
     if (foodDescriptionChanged != null) {
@@ -540,75 +608,66 @@ abstract class _FoodDescriptionChanged implements AddEvent {
 }
 
 /// @nodoc
-abstract class _$$AddFoodPressedImplCopyWith<$Res> {
-  factory _$$AddFoodPressedImplCopyWith(_$AddFoodPressedImpl value,
-          $Res Function(_$AddFoodPressedImpl) then) =
-      __$$AddFoodPressedImplCopyWithImpl<$Res>;
+abstract class _$$FoodImageChangedImplCopyWith<$Res> {
+  factory _$$FoodImageChangedImplCopyWith(_$FoodImageChangedImpl value,
+          $Res Function(_$FoodImageChangedImpl) then) =
+      __$$FoodImageChangedImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({FoodName foodName, FoodPrice foodPrice});
+  $Res call({String foodImageStr});
 }
 
 /// @nodoc
-class __$$AddFoodPressedImplCopyWithImpl<$Res>
-    extends _$AddEventCopyWithImpl<$Res, _$AddFoodPressedImpl>
-    implements _$$AddFoodPressedImplCopyWith<$Res> {
-  __$$AddFoodPressedImplCopyWithImpl(
-      _$AddFoodPressedImpl _value, $Res Function(_$AddFoodPressedImpl) _then)
+class __$$FoodImageChangedImplCopyWithImpl<$Res>
+    extends _$AddEventCopyWithImpl<$Res, _$FoodImageChangedImpl>
+    implements _$$FoodImageChangedImplCopyWith<$Res> {
+  __$$FoodImageChangedImplCopyWithImpl(_$FoodImageChangedImpl _value,
+      $Res Function(_$FoodImageChangedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? foodName = null,
-    Object? foodPrice = null,
+    Object? foodImageStr = null,
   }) {
-    return _then(_$AddFoodPressedImpl(
-      foodName: null == foodName
-          ? _value.foodName
-          : foodName // ignore: cast_nullable_to_non_nullable
-              as FoodName,
-      foodPrice: null == foodPrice
-          ? _value.foodPrice
-          : foodPrice // ignore: cast_nullable_to_non_nullable
-              as FoodPrice,
+    return _then(_$FoodImageChangedImpl(
+      null == foodImageStr
+          ? _value.foodImageStr
+          : foodImageStr // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
 
-class _$AddFoodPressedImpl implements _AddFoodPressed {
-  const _$AddFoodPressedImpl({required this.foodName, required this.foodPrice});
+class _$FoodImageChangedImpl implements _FoodImageChanged {
+  const _$FoodImageChangedImpl(this.foodImageStr);
 
   @override
-  final FoodName foodName;
-  @override
-  final FoodPrice foodPrice;
+  final String foodImageStr;
 
   @override
   String toString() {
-    return 'AddEvent.addFoodPressed(foodName: $foodName, foodPrice: $foodPrice)';
+    return 'AddEvent.foodImageChanged(foodImageStr: $foodImageStr)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AddFoodPressedImpl &&
-            (identical(other.foodName, foodName) ||
-                other.foodName == foodName) &&
-            (identical(other.foodPrice, foodPrice) ||
-                other.foodPrice == foodPrice));
+            other is _$FoodImageChangedImpl &&
+            (identical(other.foodImageStr, foodImageStr) ||
+                other.foodImageStr == foodImageStr));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, foodName, foodPrice);
+  int get hashCode => Object.hash(runtimeType, foodImageStr);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$AddFoodPressedImplCopyWith<_$AddFoodPressedImpl> get copyWith =>
-      __$$AddFoodPressedImplCopyWithImpl<_$AddFoodPressedImpl>(
+  _$$FoodImageChangedImplCopyWith<_$FoodImageChangedImpl> get copyWith =>
+      __$$FoodImageChangedImplCopyWithImpl<_$FoodImageChangedImpl>(
           this, _$identity);
 
   @override
@@ -617,10 +676,12 @@ class _$AddFoodPressedImpl implements _AddFoodPressed {
     required TResult Function(String foodNameStr) foodNameChanged,
     required TResult Function(String foodPriceStr) foodPriceChanged,
     required TResult Function(String foodDescriptionStr) foodDescriptionChanged,
-    required TResult Function(FoodName foodName, FoodPrice foodPrice)
-        addFoodPressed,
+    required TResult Function(String foodImageStr) foodImageChanged,
+    required TResult Function(String foodCatoryStr) foodCatoryChanged,
+    required TResult Function() addFoodPressed,
+    required TResult Function() getCategoriesPressed,
   }) {
-    return addFoodPressed(foodName, foodPrice);
+    return foodImageChanged(foodImageStr);
   }
 
   @override
@@ -629,9 +690,12 @@ class _$AddFoodPressedImpl implements _AddFoodPressed {
     TResult? Function(String foodNameStr)? foodNameChanged,
     TResult? Function(String foodPriceStr)? foodPriceChanged,
     TResult? Function(String foodDescriptionStr)? foodDescriptionChanged,
-    TResult? Function(FoodName foodName, FoodPrice foodPrice)? addFoodPressed,
+    TResult? Function(String foodImageStr)? foodImageChanged,
+    TResult? Function(String foodCatoryStr)? foodCatoryChanged,
+    TResult? Function()? addFoodPressed,
+    TResult? Function()? getCategoriesPressed,
   }) {
-    return addFoodPressed?.call(foodName, foodPrice);
+    return foodImageChanged?.call(foodImageStr);
   }
 
   @override
@@ -640,11 +704,14 @@ class _$AddFoodPressedImpl implements _AddFoodPressed {
     TResult Function(String foodNameStr)? foodNameChanged,
     TResult Function(String foodPriceStr)? foodPriceChanged,
     TResult Function(String foodDescriptionStr)? foodDescriptionChanged,
-    TResult Function(FoodName foodName, FoodPrice foodPrice)? addFoodPressed,
+    TResult Function(String foodImageStr)? foodImageChanged,
+    TResult Function(String foodCatoryStr)? foodCatoryChanged,
+    TResult Function()? addFoodPressed,
+    TResult Function()? getCategoriesPressed,
     required TResult orElse(),
   }) {
-    if (addFoodPressed != null) {
-      return addFoodPressed(foodName, foodPrice);
+    if (foodImageChanged != null) {
+      return foodImageChanged(foodImageStr);
     }
     return orElse();
   }
@@ -656,7 +723,316 @@ class _$AddFoodPressedImpl implements _AddFoodPressed {
     required TResult Function(_FoodPriceChanged value) foodPriceChanged,
     required TResult Function(_FoodDescriptionChanged value)
         foodDescriptionChanged,
+    required TResult Function(_FoodImageChanged value) foodImageChanged,
+    required TResult Function(_FoodCatoryChanged value) foodCatoryChanged,
     required TResult Function(_AddFoodPressed value) addFoodPressed,
+    required TResult Function(_GetCategoriesPressed value) getCategoriesPressed,
+  }) {
+    return foodImageChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FoodNameChanged value)? foodNameChanged,
+    TResult? Function(_FoodPriceChanged value)? foodPriceChanged,
+    TResult? Function(_FoodDescriptionChanged value)? foodDescriptionChanged,
+    TResult? Function(_FoodImageChanged value)? foodImageChanged,
+    TResult? Function(_FoodCatoryChanged value)? foodCatoryChanged,
+    TResult? Function(_AddFoodPressed value)? addFoodPressed,
+    TResult? Function(_GetCategoriesPressed value)? getCategoriesPressed,
+  }) {
+    return foodImageChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FoodNameChanged value)? foodNameChanged,
+    TResult Function(_FoodPriceChanged value)? foodPriceChanged,
+    TResult Function(_FoodDescriptionChanged value)? foodDescriptionChanged,
+    TResult Function(_FoodImageChanged value)? foodImageChanged,
+    TResult Function(_FoodCatoryChanged value)? foodCatoryChanged,
+    TResult Function(_AddFoodPressed value)? addFoodPressed,
+    TResult Function(_GetCategoriesPressed value)? getCategoriesPressed,
+    required TResult orElse(),
+  }) {
+    if (foodImageChanged != null) {
+      return foodImageChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FoodImageChanged implements AddEvent {
+  const factory _FoodImageChanged(final String foodImageStr) =
+      _$FoodImageChangedImpl;
+
+  String get foodImageStr;
+  @JsonKey(ignore: true)
+  _$$FoodImageChangedImplCopyWith<_$FoodImageChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FoodCatoryChangedImplCopyWith<$Res> {
+  factory _$$FoodCatoryChangedImplCopyWith(_$FoodCatoryChangedImpl value,
+          $Res Function(_$FoodCatoryChangedImpl) then) =
+      __$$FoodCatoryChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String foodCatoryStr});
+}
+
+/// @nodoc
+class __$$FoodCatoryChangedImplCopyWithImpl<$Res>
+    extends _$AddEventCopyWithImpl<$Res, _$FoodCatoryChangedImpl>
+    implements _$$FoodCatoryChangedImplCopyWith<$Res> {
+  __$$FoodCatoryChangedImplCopyWithImpl(_$FoodCatoryChangedImpl _value,
+      $Res Function(_$FoodCatoryChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? foodCatoryStr = null,
+  }) {
+    return _then(_$FoodCatoryChangedImpl(
+      null == foodCatoryStr
+          ? _value.foodCatoryStr
+          : foodCatoryStr // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FoodCatoryChangedImpl implements _FoodCatoryChanged {
+  const _$FoodCatoryChangedImpl(this.foodCatoryStr);
+
+  @override
+  final String foodCatoryStr;
+
+  @override
+  String toString() {
+    return 'AddEvent.foodCatoryChanged(foodCatoryStr: $foodCatoryStr)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FoodCatoryChangedImpl &&
+            (identical(other.foodCatoryStr, foodCatoryStr) ||
+                other.foodCatoryStr == foodCatoryStr));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, foodCatoryStr);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FoodCatoryChangedImplCopyWith<_$FoodCatoryChangedImpl> get copyWith =>
+      __$$FoodCatoryChangedImplCopyWithImpl<_$FoodCatoryChangedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String foodNameStr) foodNameChanged,
+    required TResult Function(String foodPriceStr) foodPriceChanged,
+    required TResult Function(String foodDescriptionStr) foodDescriptionChanged,
+    required TResult Function(String foodImageStr) foodImageChanged,
+    required TResult Function(String foodCatoryStr) foodCatoryChanged,
+    required TResult Function() addFoodPressed,
+    required TResult Function() getCategoriesPressed,
+  }) {
+    return foodCatoryChanged(foodCatoryStr);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String foodNameStr)? foodNameChanged,
+    TResult? Function(String foodPriceStr)? foodPriceChanged,
+    TResult? Function(String foodDescriptionStr)? foodDescriptionChanged,
+    TResult? Function(String foodImageStr)? foodImageChanged,
+    TResult? Function(String foodCatoryStr)? foodCatoryChanged,
+    TResult? Function()? addFoodPressed,
+    TResult? Function()? getCategoriesPressed,
+  }) {
+    return foodCatoryChanged?.call(foodCatoryStr);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String foodNameStr)? foodNameChanged,
+    TResult Function(String foodPriceStr)? foodPriceChanged,
+    TResult Function(String foodDescriptionStr)? foodDescriptionChanged,
+    TResult Function(String foodImageStr)? foodImageChanged,
+    TResult Function(String foodCatoryStr)? foodCatoryChanged,
+    TResult Function()? addFoodPressed,
+    TResult Function()? getCategoriesPressed,
+    required TResult orElse(),
+  }) {
+    if (foodCatoryChanged != null) {
+      return foodCatoryChanged(foodCatoryStr);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FoodNameChanged value) foodNameChanged,
+    required TResult Function(_FoodPriceChanged value) foodPriceChanged,
+    required TResult Function(_FoodDescriptionChanged value)
+        foodDescriptionChanged,
+    required TResult Function(_FoodImageChanged value) foodImageChanged,
+    required TResult Function(_FoodCatoryChanged value) foodCatoryChanged,
+    required TResult Function(_AddFoodPressed value) addFoodPressed,
+    required TResult Function(_GetCategoriesPressed value) getCategoriesPressed,
+  }) {
+    return foodCatoryChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FoodNameChanged value)? foodNameChanged,
+    TResult? Function(_FoodPriceChanged value)? foodPriceChanged,
+    TResult? Function(_FoodDescriptionChanged value)? foodDescriptionChanged,
+    TResult? Function(_FoodImageChanged value)? foodImageChanged,
+    TResult? Function(_FoodCatoryChanged value)? foodCatoryChanged,
+    TResult? Function(_AddFoodPressed value)? addFoodPressed,
+    TResult? Function(_GetCategoriesPressed value)? getCategoriesPressed,
+  }) {
+    return foodCatoryChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FoodNameChanged value)? foodNameChanged,
+    TResult Function(_FoodPriceChanged value)? foodPriceChanged,
+    TResult Function(_FoodDescriptionChanged value)? foodDescriptionChanged,
+    TResult Function(_FoodImageChanged value)? foodImageChanged,
+    TResult Function(_FoodCatoryChanged value)? foodCatoryChanged,
+    TResult Function(_AddFoodPressed value)? addFoodPressed,
+    TResult Function(_GetCategoriesPressed value)? getCategoriesPressed,
+    required TResult orElse(),
+  }) {
+    if (foodCatoryChanged != null) {
+      return foodCatoryChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FoodCatoryChanged implements AddEvent {
+  const factory _FoodCatoryChanged(final String foodCatoryStr) =
+      _$FoodCatoryChangedImpl;
+
+  String get foodCatoryStr;
+  @JsonKey(ignore: true)
+  _$$FoodCatoryChangedImplCopyWith<_$FoodCatoryChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddFoodPressedImplCopyWith<$Res> {
+  factory _$$AddFoodPressedImplCopyWith(_$AddFoodPressedImpl value,
+          $Res Function(_$AddFoodPressedImpl) then) =
+      __$$AddFoodPressedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AddFoodPressedImplCopyWithImpl<$Res>
+    extends _$AddEventCopyWithImpl<$Res, _$AddFoodPressedImpl>
+    implements _$$AddFoodPressedImplCopyWith<$Res> {
+  __$$AddFoodPressedImplCopyWithImpl(
+      _$AddFoodPressedImpl _value, $Res Function(_$AddFoodPressedImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$AddFoodPressedImpl implements _AddFoodPressed {
+  const _$AddFoodPressedImpl();
+
+  @override
+  String toString() {
+    return 'AddEvent.addFoodPressed()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AddFoodPressedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String foodNameStr) foodNameChanged,
+    required TResult Function(String foodPriceStr) foodPriceChanged,
+    required TResult Function(String foodDescriptionStr) foodDescriptionChanged,
+    required TResult Function(String foodImageStr) foodImageChanged,
+    required TResult Function(String foodCatoryStr) foodCatoryChanged,
+    required TResult Function() addFoodPressed,
+    required TResult Function() getCategoriesPressed,
+  }) {
+    return addFoodPressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String foodNameStr)? foodNameChanged,
+    TResult? Function(String foodPriceStr)? foodPriceChanged,
+    TResult? Function(String foodDescriptionStr)? foodDescriptionChanged,
+    TResult? Function(String foodImageStr)? foodImageChanged,
+    TResult? Function(String foodCatoryStr)? foodCatoryChanged,
+    TResult? Function()? addFoodPressed,
+    TResult? Function()? getCategoriesPressed,
+  }) {
+    return addFoodPressed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String foodNameStr)? foodNameChanged,
+    TResult Function(String foodPriceStr)? foodPriceChanged,
+    TResult Function(String foodDescriptionStr)? foodDescriptionChanged,
+    TResult Function(String foodImageStr)? foodImageChanged,
+    TResult Function(String foodCatoryStr)? foodCatoryChanged,
+    TResult Function()? addFoodPressed,
+    TResult Function()? getCategoriesPressed,
+    required TResult orElse(),
+  }) {
+    if (addFoodPressed != null) {
+      return addFoodPressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FoodNameChanged value) foodNameChanged,
+    required TResult Function(_FoodPriceChanged value) foodPriceChanged,
+    required TResult Function(_FoodDescriptionChanged value)
+        foodDescriptionChanged,
+    required TResult Function(_FoodImageChanged value) foodImageChanged,
+    required TResult Function(_FoodCatoryChanged value) foodCatoryChanged,
+    required TResult Function(_AddFoodPressed value) addFoodPressed,
+    required TResult Function(_GetCategoriesPressed value) getCategoriesPressed,
   }) {
     return addFoodPressed(this);
   }
@@ -667,7 +1043,10 @@ class _$AddFoodPressedImpl implements _AddFoodPressed {
     TResult? Function(_FoodNameChanged value)? foodNameChanged,
     TResult? Function(_FoodPriceChanged value)? foodPriceChanged,
     TResult? Function(_FoodDescriptionChanged value)? foodDescriptionChanged,
+    TResult? Function(_FoodImageChanged value)? foodImageChanged,
+    TResult? Function(_FoodCatoryChanged value)? foodCatoryChanged,
     TResult? Function(_AddFoodPressed value)? addFoodPressed,
+    TResult? Function(_GetCategoriesPressed value)? getCategoriesPressed,
   }) {
     return addFoodPressed?.call(this);
   }
@@ -678,7 +1057,10 @@ class _$AddFoodPressedImpl implements _AddFoodPressed {
     TResult Function(_FoodNameChanged value)? foodNameChanged,
     TResult Function(_FoodPriceChanged value)? foodPriceChanged,
     TResult Function(_FoodDescriptionChanged value)? foodDescriptionChanged,
+    TResult Function(_FoodImageChanged value)? foodImageChanged,
+    TResult Function(_FoodCatoryChanged value)? foodCatoryChanged,
     TResult Function(_AddFoodPressed value)? addFoodPressed,
+    TResult Function(_GetCategoriesPressed value)? getCategoriesPressed,
     required TResult orElse(),
   }) {
     if (addFoodPressed != null) {
@@ -689,15 +1071,141 @@ class _$AddFoodPressedImpl implements _AddFoodPressed {
 }
 
 abstract class _AddFoodPressed implements AddEvent {
-  const factory _AddFoodPressed(
-      {required final FoodName foodName,
-      required final FoodPrice foodPrice}) = _$AddFoodPressedImpl;
+  const factory _AddFoodPressed() = _$AddFoodPressedImpl;
+}
 
-  FoodName get foodName;
-  FoodPrice get foodPrice;
-  @JsonKey(ignore: true)
-  _$$AddFoodPressedImplCopyWith<_$AddFoodPressedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+/// @nodoc
+abstract class _$$GetCategoriesPressedImplCopyWith<$Res> {
+  factory _$$GetCategoriesPressedImplCopyWith(_$GetCategoriesPressedImpl value,
+          $Res Function(_$GetCategoriesPressedImpl) then) =
+      __$$GetCategoriesPressedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetCategoriesPressedImplCopyWithImpl<$Res>
+    extends _$AddEventCopyWithImpl<$Res, _$GetCategoriesPressedImpl>
+    implements _$$GetCategoriesPressedImplCopyWith<$Res> {
+  __$$GetCategoriesPressedImplCopyWithImpl(_$GetCategoriesPressedImpl _value,
+      $Res Function(_$GetCategoriesPressedImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetCategoriesPressedImpl implements _GetCategoriesPressed {
+  const _$GetCategoriesPressedImpl();
+
+  @override
+  String toString() {
+    return 'AddEvent.getCategoriesPressed()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetCategoriesPressedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String foodNameStr) foodNameChanged,
+    required TResult Function(String foodPriceStr) foodPriceChanged,
+    required TResult Function(String foodDescriptionStr) foodDescriptionChanged,
+    required TResult Function(String foodImageStr) foodImageChanged,
+    required TResult Function(String foodCatoryStr) foodCatoryChanged,
+    required TResult Function() addFoodPressed,
+    required TResult Function() getCategoriesPressed,
+  }) {
+    return getCategoriesPressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String foodNameStr)? foodNameChanged,
+    TResult? Function(String foodPriceStr)? foodPriceChanged,
+    TResult? Function(String foodDescriptionStr)? foodDescriptionChanged,
+    TResult? Function(String foodImageStr)? foodImageChanged,
+    TResult? Function(String foodCatoryStr)? foodCatoryChanged,
+    TResult? Function()? addFoodPressed,
+    TResult? Function()? getCategoriesPressed,
+  }) {
+    return getCategoriesPressed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String foodNameStr)? foodNameChanged,
+    TResult Function(String foodPriceStr)? foodPriceChanged,
+    TResult Function(String foodDescriptionStr)? foodDescriptionChanged,
+    TResult Function(String foodImageStr)? foodImageChanged,
+    TResult Function(String foodCatoryStr)? foodCatoryChanged,
+    TResult Function()? addFoodPressed,
+    TResult Function()? getCategoriesPressed,
+    required TResult orElse(),
+  }) {
+    if (getCategoriesPressed != null) {
+      return getCategoriesPressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FoodNameChanged value) foodNameChanged,
+    required TResult Function(_FoodPriceChanged value) foodPriceChanged,
+    required TResult Function(_FoodDescriptionChanged value)
+        foodDescriptionChanged,
+    required TResult Function(_FoodImageChanged value) foodImageChanged,
+    required TResult Function(_FoodCatoryChanged value) foodCatoryChanged,
+    required TResult Function(_AddFoodPressed value) addFoodPressed,
+    required TResult Function(_GetCategoriesPressed value) getCategoriesPressed,
+  }) {
+    return getCategoriesPressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FoodNameChanged value)? foodNameChanged,
+    TResult? Function(_FoodPriceChanged value)? foodPriceChanged,
+    TResult? Function(_FoodDescriptionChanged value)? foodDescriptionChanged,
+    TResult? Function(_FoodImageChanged value)? foodImageChanged,
+    TResult? Function(_FoodCatoryChanged value)? foodCatoryChanged,
+    TResult? Function(_AddFoodPressed value)? addFoodPressed,
+    TResult? Function(_GetCategoriesPressed value)? getCategoriesPressed,
+  }) {
+    return getCategoriesPressed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FoodNameChanged value)? foodNameChanged,
+    TResult Function(_FoodPriceChanged value)? foodPriceChanged,
+    TResult Function(_FoodDescriptionChanged value)? foodDescriptionChanged,
+    TResult Function(_FoodImageChanged value)? foodImageChanged,
+    TResult Function(_FoodCatoryChanged value)? foodCatoryChanged,
+    TResult Function(_AddFoodPressed value)? addFoodPressed,
+    TResult Function(_GetCategoriesPressed value)? getCategoriesPressed,
+    required TResult orElse(),
+  }) {
+    if (getCategoriesPressed != null) {
+      return getCategoriesPressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetCategoriesPressed implements AddEvent {
+  const factory _GetCategoriesPressed() = _$GetCategoriesPressedImpl;
 }
 
 /// @nodoc
@@ -710,7 +1218,12 @@ mixin _$AddState {
   bool get isSubmitting => throw _privateConstructorUsedError;
   bool get isSuccess => throw _privateConstructorUsedError;
   bool get isFailure => throw _privateConstructorUsedError;
-  String get errorMessage => throw _privateConstructorUsedError;
+  bool get showErrorMessages => throw _privateConstructorUsedError;
+  Option<Either<AddFailure, Unit>> get addFailureOrSuccessOption =>
+      throw _privateConstructorUsedError;
+  Option<Either<AddFailure, List<ListCategory>?>>
+      get getCategoriesFailureOrSuccessOption =>
+          throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AddStateCopyWith<AddState> get copyWith =>
@@ -731,7 +1244,10 @@ abstract class $AddStateCopyWith<$Res> {
       bool isSubmitting,
       bool isSuccess,
       bool isFailure,
-      String errorMessage});
+      bool showErrorMessages,
+      Option<Either<AddFailure, Unit>> addFailureOrSuccessOption,
+      Option<Either<AddFailure, List<ListCategory>?>>
+          getCategoriesFailureOrSuccessOption});
 }
 
 /// @nodoc
@@ -755,7 +1271,9 @@ class _$AddStateCopyWithImpl<$Res, $Val extends AddState>
     Object? isSubmitting = null,
     Object? isSuccess = null,
     Object? isFailure = null,
-    Object? errorMessage = null,
+    Object? showErrorMessages = null,
+    Object? addFailureOrSuccessOption = null,
+    Object? getCategoriesFailureOrSuccessOption = null,
   }) {
     return _then(_value.copyWith(
       foodName: null == foodName
@@ -790,10 +1308,19 @@ class _$AddStateCopyWithImpl<$Res, $Val extends AddState>
           ? _value.isFailure
           : isFailure // ignore: cast_nullable_to_non_nullable
               as bool,
-      errorMessage: null == errorMessage
-          ? _value.errorMessage
-          : errorMessage // ignore: cast_nullable_to_non_nullable
-              as String,
+      showErrorMessages: null == showErrorMessages
+          ? _value.showErrorMessages
+          : showErrorMessages // ignore: cast_nullable_to_non_nullable
+              as bool,
+      addFailureOrSuccessOption: null == addFailureOrSuccessOption
+          ? _value.addFailureOrSuccessOption
+          : addFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<AddFailure, Unit>>,
+      getCategoriesFailureOrSuccessOption: null ==
+              getCategoriesFailureOrSuccessOption
+          ? _value.getCategoriesFailureOrSuccessOption
+          : getCategoriesFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<AddFailure, List<ListCategory>?>>,
     ) as $Val);
   }
 }
@@ -815,7 +1342,10 @@ abstract class _$$AddStateImplCopyWith<$Res>
       bool isSubmitting,
       bool isSuccess,
       bool isFailure,
-      String errorMessage});
+      bool showErrorMessages,
+      Option<Either<AddFailure, Unit>> addFailureOrSuccessOption,
+      Option<Either<AddFailure, List<ListCategory>?>>
+          getCategoriesFailureOrSuccessOption});
 }
 
 /// @nodoc
@@ -837,7 +1367,9 @@ class __$$AddStateImplCopyWithImpl<$Res>
     Object? isSubmitting = null,
     Object? isSuccess = null,
     Object? isFailure = null,
-    Object? errorMessage = null,
+    Object? showErrorMessages = null,
+    Object? addFailureOrSuccessOption = null,
+    Object? getCategoriesFailureOrSuccessOption = null,
   }) {
     return _then(_$AddStateImpl(
       foodName: null == foodName
@@ -872,10 +1404,19 @@ class __$$AddStateImplCopyWithImpl<$Res>
           ? _value.isFailure
           : isFailure // ignore: cast_nullable_to_non_nullable
               as bool,
-      errorMessage: null == errorMessage
-          ? _value.errorMessage
-          : errorMessage // ignore: cast_nullable_to_non_nullable
-              as String,
+      showErrorMessages: null == showErrorMessages
+          ? _value.showErrorMessages
+          : showErrorMessages // ignore: cast_nullable_to_non_nullable
+              as bool,
+      addFailureOrSuccessOption: null == addFailureOrSuccessOption
+          ? _value.addFailureOrSuccessOption
+          : addFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<AddFailure, Unit>>,
+      getCategoriesFailureOrSuccessOption: null ==
+              getCategoriesFailureOrSuccessOption
+          ? _value.getCategoriesFailureOrSuccessOption
+          : getCategoriesFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<AddFailure, List<ListCategory>?>>,
     ));
   }
 }
@@ -892,7 +1433,9 @@ class _$AddStateImpl implements _AddState {
       required this.isSubmitting,
       required this.isSuccess,
       required this.isFailure,
-      required this.errorMessage});
+      required this.showErrorMessages,
+      required this.addFailureOrSuccessOption,
+      required this.getCategoriesFailureOrSuccessOption});
 
   @override
   final FoodName foodName;
@@ -911,11 +1454,16 @@ class _$AddStateImpl implements _AddState {
   @override
   final bool isFailure;
   @override
-  final String errorMessage;
+  final bool showErrorMessages;
+  @override
+  final Option<Either<AddFailure, Unit>> addFailureOrSuccessOption;
+  @override
+  final Option<Either<AddFailure, List<ListCategory>?>>
+      getCategoriesFailureOrSuccessOption;
 
   @override
   String toString() {
-    return 'AddState(foodName: $foodName, foodPrice: $foodPrice, foodDescription: $foodDescription, foodCategory: $foodCategory, foodImage: $foodImage, isSubmitting: $isSubmitting, isSuccess: $isSuccess, isFailure: $isFailure, errorMessage: $errorMessage)';
+    return 'AddState(foodName: $foodName, foodPrice: $foodPrice, foodDescription: $foodDescription, foodCategory: $foodCategory, foodImage: $foodImage, isSubmitting: $isSubmitting, isSuccess: $isSuccess, isFailure: $isFailure, showErrorMessages: $showErrorMessages, addFailureOrSuccessOption: $addFailureOrSuccessOption, getCategoriesFailureOrSuccessOption: $getCategoriesFailureOrSuccessOption)';
   }
 
   @override
@@ -939,8 +1487,15 @@ class _$AddStateImpl implements _AddState {
                 other.isSuccess == isSuccess) &&
             (identical(other.isFailure, isFailure) ||
                 other.isFailure == isFailure) &&
-            (identical(other.errorMessage, errorMessage) ||
-                other.errorMessage == errorMessage));
+            (identical(other.showErrorMessages, showErrorMessages) ||
+                other.showErrorMessages == showErrorMessages) &&
+            (identical(other.addFailureOrSuccessOption,
+                    addFailureOrSuccessOption) ||
+                other.addFailureOrSuccessOption == addFailureOrSuccessOption) &&
+            (identical(other.getCategoriesFailureOrSuccessOption,
+                    getCategoriesFailureOrSuccessOption) ||
+                other.getCategoriesFailureOrSuccessOption ==
+                    getCategoriesFailureOrSuccessOption));
   }
 
   @override
@@ -954,7 +1509,9 @@ class _$AddStateImpl implements _AddState {
       isSubmitting,
       isSuccess,
       isFailure,
-      errorMessage);
+      showErrorMessages,
+      addFailureOrSuccessOption,
+      getCategoriesFailureOrSuccessOption);
 
   @JsonKey(ignore: true)
   @override
@@ -973,7 +1530,10 @@ abstract class _AddState implements AddState {
       required final bool isSubmitting,
       required final bool isSuccess,
       required final bool isFailure,
-      required final String errorMessage}) = _$AddStateImpl;
+      required final bool showErrorMessages,
+      required final Option<Either<AddFailure, Unit>> addFailureOrSuccessOption,
+      required final Option<Either<AddFailure, List<ListCategory>?>>
+          getCategoriesFailureOrSuccessOption}) = _$AddStateImpl;
 
   @override
   FoodName get foodName;
@@ -992,7 +1552,12 @@ abstract class _AddState implements AddState {
   @override
   bool get isFailure;
   @override
-  String get errorMessage;
+  bool get showErrorMessages;
+  @override
+  Option<Either<AddFailure, Unit>> get addFailureOrSuccessOption;
+  @override
+  Option<Either<AddFailure, List<ListCategory>?>>
+      get getCategoriesFailureOrSuccessOption;
   @override
   @JsonKey(ignore: true)
   _$$AddStateImplCopyWith<_$AddStateImpl> get copyWith =>

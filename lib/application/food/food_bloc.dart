@@ -38,10 +38,10 @@ class FoodBloc extends Bloc<FoodEvent, FoodState> {
   Future<void> _mapSearchFoodToState(
       _SearchFood event, Emitter<FoodState> emit) async {
     emit(const FoodState.loadiingInProgress());
-    if (_debounce != null && _debounce!.isActive) {
-      emit(const FoodState.loadiingInProgress());
-    } else {
-      _debounce = Timer(const Duration(milliseconds: 500), () async {});
+    // if (_debounce != null && _debounce!.isActive) {
+    //   emit(const FoodState.loadiingInProgress());
+    // } else {
+      // _debounce = Timer(const Duration(milliseconds: 500), () async {});
       final failureOrFoodList = await _foodRepository.getFoodList();
       emit(
         failureOrFoodList.fold(
@@ -58,7 +58,7 @@ class FoodBloc extends Bloc<FoodEvent, FoodState> {
           ),
         ),
       );
-    }
+    // }
   }
 
   Future<void> _mapHideFoodToState(

@@ -3,10 +3,12 @@ part of 'app_cubit.dart';
 @freezed
 class AppState with _$AppState {
   const factory AppState({
-    required File image,
+    required bool isLoading,
+    required String image,
   }) = _AppState;
 
   factory AppState.initial() => AppState(
-        image: File(''),
+        isLoading: false,
+        image: '',
       );
 }

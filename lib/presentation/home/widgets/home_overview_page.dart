@@ -11,8 +11,8 @@ class HomeOverviewPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return  AppResponsiveBuilder(
       isMobile: HomeMobileView(),
-      isTablet: HomeTabletView(),
-      isDesktop: HomeDesktopView(),
+      isTablet: const HomeTabletView(),
+      isDesktop: const HomeDesktopView(),
     );
   }
 }

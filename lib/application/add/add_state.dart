@@ -11,18 +11,22 @@ class AddState with _$AddState {
     required bool isSubmitting,
     required bool isSuccess,
     required bool isFailure,
-    required String errorMessage,
+    required bool showErrorMessages,
+    required Option<Either<AddFailure, Unit>> addFailureOrSuccessOption,
+    required Option<Either<AddFailure, List<ListCategory>?>> getCategoriesFailureOrSuccessOption,
   }) = _AddState;
 
   factory AddState.initial() =>  AddState(
         isSubmitting: false,
         isSuccess: false,
         isFailure: false,
-        errorMessage: '',
+        showErrorMessages: false,
         foodName: FoodName(''),
         foodPrice: FoodPrice(''),
         foodDescription: FoodDescription(''),
         foodCategory: '',
         foodImage: '',
+        addFailureOrSuccessOption: none(),
+        getCategoriesFailureOrSuccessOption: none(),
       );
 }

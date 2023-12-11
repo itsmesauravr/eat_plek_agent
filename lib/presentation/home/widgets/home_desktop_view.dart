@@ -173,10 +173,6 @@ class HomeDesktopView extends HookWidget {
                       : const OrderDeskTopView()
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.add),
-      ),
     );
   }
 }

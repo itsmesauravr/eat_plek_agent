@@ -12,6 +12,6 @@ class EditPage extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Edit'),
         ),
-        body: EditOverviewPage());
+        body: const EditOverviewPage());
   }
 }
