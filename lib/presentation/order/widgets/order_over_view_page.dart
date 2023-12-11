@@ -65,6 +65,8 @@ class _OrderOverviewPageState extends State<OrderOverviewPage> {
 
   @override
   Widget build(BuildContext context) {
+    final timeChangeController = TextEditingController();
+    final noteController = TextEditingController();
     return InkWell(
       onHover: (value) {
         if (value) {
@@ -223,12 +225,14 @@ class _OrderOverviewPageState extends State<OrderOverviewPage> {
                                             width: 300,
                                           ),
                                           TextField(
+                                            controller: timeChangeController,
                                             decoration: InputDecoration(
                                                 hintText:
                                                     'Enter Time Change (in minutes)',
                                                 hintStyle: kTextBodyStyle),
                                           ),
                                           TextField(
+                                            controller: noteController,
                                             decoration: InputDecoration(
                                                 hintText:
                                                     'Enter Note For Customer',
@@ -250,8 +254,11 @@ class _OrderOverviewPageState extends State<OrderOverviewPage> {
                                                   StatusEvent.postStatus(
                                                     bookingId:
                                                         widget.state?.id ?? '',
-                                                    timeChange: '',
-                                                    note: '',
+                                                    timeChange: timeChangeController
+                                                        .text
+                                                        .trim(),
+                                                    note: noteController.text
+                                                        .trim(),
                                                     status: 'Changed',
                                                   ),
                                                 );
