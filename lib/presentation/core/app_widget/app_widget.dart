@@ -19,7 +19,7 @@ class AppWidget extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => AppCubit()),
-        BlocProvider<AuthBloc>(create: (context) => getIt<AuthBloc>()),
+        BlocProvider<AuthBloc>(create: (context) => getIt<AuthBloc>()..add(const AuthEvent.checkAuthentication())),
         BlocProvider(create: (context) => getIt<FoodBloc>()),
         BlocProvider(create: (context) => getIt<OrderBloc>()),
         BlocProvider(create: (context) => getIt<StatusBloc>()),

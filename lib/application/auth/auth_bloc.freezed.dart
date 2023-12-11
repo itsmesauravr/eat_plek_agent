@@ -21,6 +21,7 @@ mixin _$AuthEvent {
     required TResult Function(String phoneNumberStr) phoneNumberChanged,
     required TResult Function(String passwordStr) passwordChanged,
     required TResult Function() loginWithPhoneNumberAndPassword,
+    required TResult Function() checkAuthentication,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$AuthEvent {
     TResult? Function(String phoneNumberStr)? phoneNumberChanged,
     TResult? Function(String passwordStr)? passwordChanged,
     TResult? Function()? loginWithPhoneNumberAndPassword,
+    TResult? Function()? checkAuthentication,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$AuthEvent {
     TResult Function(String phoneNumberStr)? phoneNumberChanged,
     TResult Function(String passwordStr)? passwordChanged,
     TResult Function()? loginWithPhoneNumberAndPassword,
+    TResult Function()? checkAuthentication,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -44,6 +47,7 @@ mixin _$AuthEvent {
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_LoginWithPhoneNumberAndPassword value)
         loginWithPhoneNumberAndPassword,
+    required TResult Function(_CheckAuthentication value) checkAuthentication,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -52,6 +56,7 @@ mixin _$AuthEvent {
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_LoginWithPhoneNumberAndPassword value)?
         loginWithPhoneNumberAndPassword,
+    TResult? Function(_CheckAuthentication value)? checkAuthentication,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -60,6 +65,7 @@ mixin _$AuthEvent {
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_LoginWithPhoneNumberAndPassword value)?
         loginWithPhoneNumberAndPassword,
+    TResult Function(_CheckAuthentication value)? checkAuthentication,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -151,6 +157,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     required TResult Function(String phoneNumberStr) phoneNumberChanged,
     required TResult Function(String passwordStr) passwordChanged,
     required TResult Function() loginWithPhoneNumberAndPassword,
+    required TResult Function() checkAuthentication,
   }) {
     return phoneNumberChanged(phoneNumberStr);
   }
@@ -161,6 +168,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult? Function(String phoneNumberStr)? phoneNumberChanged,
     TResult? Function(String passwordStr)? passwordChanged,
     TResult? Function()? loginWithPhoneNumberAndPassword,
+    TResult? Function()? checkAuthentication,
   }) {
     return phoneNumberChanged?.call(phoneNumberStr);
   }
@@ -171,6 +179,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult Function(String phoneNumberStr)? phoneNumberChanged,
     TResult Function(String passwordStr)? passwordChanged,
     TResult Function()? loginWithPhoneNumberAndPassword,
+    TResult Function()? checkAuthentication,
     required TResult orElse(),
   }) {
     if (phoneNumberChanged != null) {
@@ -186,6 +195,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_LoginWithPhoneNumberAndPassword value)
         loginWithPhoneNumberAndPassword,
+    required TResult Function(_CheckAuthentication value) checkAuthentication,
   }) {
     return phoneNumberChanged(this);
   }
@@ -197,6 +207,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_LoginWithPhoneNumberAndPassword value)?
         loginWithPhoneNumberAndPassword,
+    TResult? Function(_CheckAuthentication value)? checkAuthentication,
   }) {
     return phoneNumberChanged?.call(this);
   }
@@ -208,6 +219,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_LoginWithPhoneNumberAndPassword value)?
         loginWithPhoneNumberAndPassword,
+    TResult Function(_CheckAuthentication value)? checkAuthentication,
     required TResult orElse(),
   }) {
     if (phoneNumberChanged != null) {
@@ -296,6 +308,7 @@ class _$PasswordChangedImpl implements _PasswordChanged {
     required TResult Function(String phoneNumberStr) phoneNumberChanged,
     required TResult Function(String passwordStr) passwordChanged,
     required TResult Function() loginWithPhoneNumberAndPassword,
+    required TResult Function() checkAuthentication,
   }) {
     return passwordChanged(passwordStr);
   }
@@ -306,6 +319,7 @@ class _$PasswordChangedImpl implements _PasswordChanged {
     TResult? Function(String phoneNumberStr)? phoneNumberChanged,
     TResult? Function(String passwordStr)? passwordChanged,
     TResult? Function()? loginWithPhoneNumberAndPassword,
+    TResult? Function()? checkAuthentication,
   }) {
     return passwordChanged?.call(passwordStr);
   }
@@ -316,6 +330,7 @@ class _$PasswordChangedImpl implements _PasswordChanged {
     TResult Function(String phoneNumberStr)? phoneNumberChanged,
     TResult Function(String passwordStr)? passwordChanged,
     TResult Function()? loginWithPhoneNumberAndPassword,
+    TResult Function()? checkAuthentication,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -331,6 +346,7 @@ class _$PasswordChangedImpl implements _PasswordChanged {
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_LoginWithPhoneNumberAndPassword value)
         loginWithPhoneNumberAndPassword,
+    required TResult Function(_CheckAuthentication value) checkAuthentication,
   }) {
     return passwordChanged(this);
   }
@@ -342,6 +358,7 @@ class _$PasswordChangedImpl implements _PasswordChanged {
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_LoginWithPhoneNumberAndPassword value)?
         loginWithPhoneNumberAndPassword,
+    TResult? Function(_CheckAuthentication value)? checkAuthentication,
   }) {
     return passwordChanged?.call(this);
   }
@@ -353,6 +370,7 @@ class _$PasswordChangedImpl implements _PasswordChanged {
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_LoginWithPhoneNumberAndPassword value)?
         loginWithPhoneNumberAndPassword,
+    TResult Function(_CheckAuthentication value)? checkAuthentication,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -417,6 +435,7 @@ class _$LoginWithPhoneNumberAndPasswordImpl
     required TResult Function(String phoneNumberStr) phoneNumberChanged,
     required TResult Function(String passwordStr) passwordChanged,
     required TResult Function() loginWithPhoneNumberAndPassword,
+    required TResult Function() checkAuthentication,
   }) {
     return loginWithPhoneNumberAndPassword();
   }
@@ -427,6 +446,7 @@ class _$LoginWithPhoneNumberAndPasswordImpl
     TResult? Function(String phoneNumberStr)? phoneNumberChanged,
     TResult? Function(String passwordStr)? passwordChanged,
     TResult? Function()? loginWithPhoneNumberAndPassword,
+    TResult? Function()? checkAuthentication,
   }) {
     return loginWithPhoneNumberAndPassword?.call();
   }
@@ -437,6 +457,7 @@ class _$LoginWithPhoneNumberAndPasswordImpl
     TResult Function(String phoneNumberStr)? phoneNumberChanged,
     TResult Function(String passwordStr)? passwordChanged,
     TResult Function()? loginWithPhoneNumberAndPassword,
+    TResult Function()? checkAuthentication,
     required TResult orElse(),
   }) {
     if (loginWithPhoneNumberAndPassword != null) {
@@ -452,6 +473,7 @@ class _$LoginWithPhoneNumberAndPasswordImpl
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_LoginWithPhoneNumberAndPassword value)
         loginWithPhoneNumberAndPassword,
+    required TResult Function(_CheckAuthentication value) checkAuthentication,
   }) {
     return loginWithPhoneNumberAndPassword(this);
   }
@@ -463,6 +485,7 @@ class _$LoginWithPhoneNumberAndPasswordImpl
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_LoginWithPhoneNumberAndPassword value)?
         loginWithPhoneNumberAndPassword,
+    TResult? Function(_CheckAuthentication value)? checkAuthentication,
   }) {
     return loginWithPhoneNumberAndPassword?.call(this);
   }
@@ -474,6 +497,7 @@ class _$LoginWithPhoneNumberAndPasswordImpl
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_LoginWithPhoneNumberAndPassword value)?
         loginWithPhoneNumberAndPassword,
+    TResult Function(_CheckAuthentication value)? checkAuthentication,
     required TResult orElse(),
   }) {
     if (loginWithPhoneNumberAndPassword != null) {
@@ -489,6 +513,124 @@ abstract class _LoginWithPhoneNumberAndPassword implements AuthEvent {
 }
 
 /// @nodoc
+abstract class _$$CheckAuthenticationImplCopyWith<$Res> {
+  factory _$$CheckAuthenticationImplCopyWith(_$CheckAuthenticationImpl value,
+          $Res Function(_$CheckAuthenticationImpl) then) =
+      __$$CheckAuthenticationImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CheckAuthenticationImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$CheckAuthenticationImpl>
+    implements _$$CheckAuthenticationImplCopyWith<$Res> {
+  __$$CheckAuthenticationImplCopyWithImpl(_$CheckAuthenticationImpl _value,
+      $Res Function(_$CheckAuthenticationImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CheckAuthenticationImpl implements _CheckAuthentication {
+  const _$CheckAuthenticationImpl();
+
+  @override
+  String toString() {
+    return 'AuthEvent.checkAuthentication()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CheckAuthenticationImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String phoneNumberStr) phoneNumberChanged,
+    required TResult Function(String passwordStr) passwordChanged,
+    required TResult Function() loginWithPhoneNumberAndPassword,
+    required TResult Function() checkAuthentication,
+  }) {
+    return checkAuthentication();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String phoneNumberStr)? phoneNumberChanged,
+    TResult? Function(String passwordStr)? passwordChanged,
+    TResult? Function()? loginWithPhoneNumberAndPassword,
+    TResult? Function()? checkAuthentication,
+  }) {
+    return checkAuthentication?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String phoneNumberStr)? phoneNumberChanged,
+    TResult Function(String passwordStr)? passwordChanged,
+    TResult Function()? loginWithPhoneNumberAndPassword,
+    TResult Function()? checkAuthentication,
+    required TResult orElse(),
+  }) {
+    if (checkAuthentication != null) {
+      return checkAuthentication();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_PhoneNumberChanged value) phoneNumberChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_LoginWithPhoneNumberAndPassword value)
+        loginWithPhoneNumberAndPassword,
+    required TResult Function(_CheckAuthentication value) checkAuthentication,
+  }) {
+    return checkAuthentication(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult? Function(_PasswordChanged value)? passwordChanged,
+    TResult? Function(_LoginWithPhoneNumberAndPassword value)?
+        loginWithPhoneNumberAndPassword,
+    TResult? Function(_CheckAuthentication value)? checkAuthentication,
+  }) {
+    return checkAuthentication?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_LoginWithPhoneNumberAndPassword value)?
+        loginWithPhoneNumberAndPassword,
+    TResult Function(_CheckAuthentication value)? checkAuthentication,
+    required TResult orElse(),
+  }) {
+    if (checkAuthentication != null) {
+      return checkAuthentication(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CheckAuthentication implements AuthEvent {
+  const factory _CheckAuthentication() = _$CheckAuthenticationImpl;
+}
+
+/// @nodoc
 mixin _$AuthState {
   PhoneNumber get phoneNumber => throw _privateConstructorUsedError;
   Password get password => throw _privateConstructorUsedError;
@@ -497,6 +639,7 @@ mixin _$AuthState {
   bool get showErrorMessages => throw _privateConstructorUsedError;
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption =>
       throw _privateConstructorUsedError;
+  bool get isAuthenticating => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AuthStateCopyWith<AuthState> get copyWith =>
@@ -514,7 +657,8 @@ abstract class $AuthStateCopyWith<$Res> {
       Otp otp,
       bool isSubmitting,
       bool showErrorMessages,
-      Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
+      Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
+      bool isAuthenticating});
 }
 
 /// @nodoc
@@ -536,6 +680,7 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
     Object? isSubmitting = null,
     Object? showErrorMessages = null,
     Object? authFailureOrSuccessOption = null,
+    Object? isAuthenticating = null,
   }) {
     return _then(_value.copyWith(
       phoneNumber: null == phoneNumber
@@ -562,6 +707,10 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
           ? _value.authFailureOrSuccessOption
           : authFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<AuthFailure, Unit>>,
+      isAuthenticating: null == isAuthenticating
+          ? _value.isAuthenticating
+          : isAuthenticating // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -580,7 +729,8 @@ abstract class _$$AuthStateImplCopyWith<$Res>
       Otp otp,
       bool isSubmitting,
       bool showErrorMessages,
-      Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
+      Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
+      bool isAuthenticating});
 }
 
 /// @nodoc
@@ -600,6 +750,7 @@ class __$$AuthStateImplCopyWithImpl<$Res>
     Object? isSubmitting = null,
     Object? showErrorMessages = null,
     Object? authFailureOrSuccessOption = null,
+    Object? isAuthenticating = null,
   }) {
     return _then(_$AuthStateImpl(
       phoneNumber: null == phoneNumber
@@ -626,6 +777,10 @@ class __$$AuthStateImplCopyWithImpl<$Res>
           ? _value.authFailureOrSuccessOption
           : authFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<AuthFailure, Unit>>,
+      isAuthenticating: null == isAuthenticating
+          ? _value.isAuthenticating
+          : isAuthenticating // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -639,7 +794,8 @@ class _$AuthStateImpl implements _AuthState {
       required this.otp,
       required this.isSubmitting,
       required this.showErrorMessages,
-      required this.authFailureOrSuccessOption});
+      required this.authFailureOrSuccessOption,
+      required this.isAuthenticating});
 
   @override
   final PhoneNumber phoneNumber;
@@ -653,10 +809,12 @@ class _$AuthStateImpl implements _AuthState {
   final bool showErrorMessages;
   @override
   final Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption;
+  @override
+  final bool isAuthenticating;
 
   @override
   String toString() {
-    return 'AuthState(phoneNumber: $phoneNumber, password: $password, otp: $otp, isSubmitting: $isSubmitting, showErrorMessages: $showErrorMessages, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
+    return 'AuthState(phoneNumber: $phoneNumber, password: $password, otp: $otp, isSubmitting: $isSubmitting, showErrorMessages: $showErrorMessages, authFailureOrSuccessOption: $authFailureOrSuccessOption, isAuthenticating: $isAuthenticating)';
   }
 
   @override
@@ -676,12 +834,21 @@ class _$AuthStateImpl implements _AuthState {
             (identical(other.authFailureOrSuccessOption,
                     authFailureOrSuccessOption) ||
                 other.authFailureOrSuccessOption ==
-                    authFailureOrSuccessOption));
+                    authFailureOrSuccessOption) &&
+            (identical(other.isAuthenticating, isAuthenticating) ||
+                other.isAuthenticating == isAuthenticating));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, phoneNumber, password, otp,
-      isSubmitting, showErrorMessages, authFailureOrSuccessOption);
+  int get hashCode => Object.hash(
+      runtimeType,
+      phoneNumber,
+      password,
+      otp,
+      isSubmitting,
+      showErrorMessages,
+      authFailureOrSuccessOption,
+      isAuthenticating);
 
   @JsonKey(ignore: true)
   @override
@@ -698,7 +865,8 @@ abstract class _AuthState implements AuthState {
       required final bool isSubmitting,
       required final bool showErrorMessages,
       required final Option<Either<AuthFailure, Unit>>
-          authFailureOrSuccessOption}) = _$AuthStateImpl;
+          authFailureOrSuccessOption,
+      required final bool isAuthenticating}) = _$AuthStateImpl;
 
   @override
   PhoneNumber get phoneNumber;
@@ -712,6 +880,8 @@ abstract class _AuthState implements AuthState {
   bool get showErrorMessages;
   @override
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption;
+  @override
+  bool get isAuthenticating;
   @override
   @JsonKey(ignore: true)
   _$$AuthStateImplCopyWith<_$AuthStateImpl> get copyWith =>

@@ -8,4 +8,5 @@ class AuthEvent with _$AuthEvent {
       _PasswordChanged;
   const factory AuthEvent.loginWithPhoneNumberAndPassword() =
       _LoginWithPhoneNumberAndPassword;
+   const factory AuthEvent.checkAuthentication() = _CheckAuthentication;
 }
